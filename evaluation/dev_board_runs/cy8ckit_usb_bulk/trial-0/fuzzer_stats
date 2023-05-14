@@ -1,0 +1,53 @@
+{
+    "start_time_epoch": 1673892433,
+    "end_time_epoch": 1673978887,
+    "start_time": "16_Jan_2023_19:07:13_CET",
+    "runtime": 86454,
+    "coverage": 239,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 80,
+    "runs": 24849,
+    "runs_per_sec": 0.2874245263377056,
+    "cfg_updates": [
+        {
+            "timestamp": 1673892474,
+            "total_basic_blocks": 421,
+            "total_edges": 612
+        },
+        {
+            "timestamp": 1673893440,
+            "total_basic_blocks": 434,
+            "total_edges": 630
+        },
+        {
+            "timestamp": 1673895535,
+            "total_basic_blocks": 442,
+            "total_edges": 641
+        },
+        {
+            "timestamp": 1673941468,
+            "total_basic_blocks": 456,
+            "total_edges": 660
+        },
+        {
+            "timestamp": 1673944261,
+            "total_basic_blocks": 456,
+            "total_edges": 661
+        }
+    ],
+    "config_file_path": "./example_firmware/CY8CKIT_usb_msc/cy8ckit_fuzz_usb_bulk.cfg",
+    "corpus_state": [
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=129, num_fuzzed=27, childs=4, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:1,orig:0,addr:0x10009bdc,timestamp:358, depth=1, hit_blocks=43, num_fuzzed=38, childs=2, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:2,orig:1,addr:0x10008066,timestamp:865, depth=2, hit_blocks=21, num_fuzzed=42, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:3,orig:0,addr:0x1000a09e,timestamp:3047, depth=1, hit_blocks=6, num_fuzzed=44, childs=1, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:4,orig:3,addr:0x1000807a,timestamp:5317, depth=2, hit_blocks=1, num_fuzzed=28, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:5,orig:0,addr:0x10009c8c,timestamp:37018, depth=1, hit_blocks=5, num_fuzzed=15, childs=1, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:6,orig:0,addr:0x1000a3f2,timestamp:46033, depth=1, hit_blocks=4, num_fuzzed=15, childs=2, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:7,orig:6,addr:0x1000a03c,timestamp:46715, depth=2, hit_blocks=22, num_fuzzed=15, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:8,orig:6,addr:0x1000a334,timestamp:61010, depth=2, hit_blocks=5, num_fuzzed=11, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:9,orig:5,addr:0x1000a296,timestamp:62456, depth=2, hit_blocks=1, num_fuzzed=10, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_usb_bulk/trial-0/corpus/id:10,orig:1,addr:0x1000804a,timestamp:76098, depth=2, hit_blocks=2, num_fuzzed=3, childs=0, weight=2.0, burn_in=2"
+    ]
+}

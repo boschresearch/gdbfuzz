@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1675968937,
+    "end_time_epoch": 1676055362,
+    "start_time": "09_Feb_2023_19:55:37_CET",
+    "runtime": 86425,
+    "coverage": 10,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 7,
+    "runs": 7220990,
+    "runs_per_sec": 83.55209719409893,
+    "cfg_updates": [
+        {
+            "timestamp": 1675968944,
+            "total_basic_blocks": 17,
+            "total_edges": 29
+        }
+    ],
+    "config_file_path": "./example_firmware/stm32_disco_buggy/fuzz_serial_no_corpus.cfg",
+    "corpus_state": [
+        "./output/stm32_buggy_no_corpus/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=7220, childs=0, weight=1.0, burn_in=0"
+    ]
+}

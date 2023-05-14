@@ -1,0 +1,26 @@
+{
+    "start_time_epoch": 1673421615,
+    "end_time_epoch": 0,
+    "start_time": "11_Jan_2023_08:20:15_CET",
+    "runtime": 1037,
+    "coverage": 9,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 7,
+    "runs": 36785,
+    "runs_per_sec": 35.4725168756027,
+    "cfg_updates": [
+        {
+            "timestamp": 1673421623,
+            "total_basic_blocks": 15,
+            "total_edges": 26
+        }
+    ],
+    "config_file_path": "./example_firmware/esp32_buggy/fuzz_serial.cfg",
+    "corpus_state": [
+        "./output/esp32_buggy/trial-22/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=3, num_fuzzed=14, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_buggy/trial-22/corpus/id:1,orig:0,addr:0x400d1041,timestamp:42, depth=1, hit_blocks=2, num_fuzzed=19, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_buggy/trial-22/corpus/id:2,orig:1,addr:0x400d1050,timestamp:832, depth=2, hit_blocks=2, num_fuzzed=2, childs=1, weight=3.0, burn_in=3",
+        "./output/esp32_buggy/trial-22/corpus/id:3,orig:2,addr:0x400d1059,timestamp:862, depth=3, hit_blocks=2, num_fuzzed=2, childs=0, weight=4.0, burn_in=3"
+    ]
+}

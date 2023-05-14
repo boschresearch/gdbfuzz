@@ -1,0 +1,36 @@
+{
+    "start_time_epoch": 1676291786,
+    "end_time_epoch": 1676378253,
+    "start_time": "13_Feb_2023_12:36:26_UTC",
+    "runtime": 86467,
+    "coverage": 352,
+    "crashes": 6682,
+    "timeouts": 0,
+    "breakpoint_interruptions": 159,
+    "runs": 60204,
+    "runs_per_sec": 0.6962656273491621,
+    "cfg_updates": [
+        {
+            "timestamp": 1676291843,
+            "total_basic_blocks": 1130,
+            "total_edges": 1778
+        },
+        {
+            "timestamp": 1676292773,
+            "total_basic_blocks": 1130,
+            "total_edges": 1778
+        }
+    ],
+    "config_file_path": "/configs/jsonRandomBasicBlock_265bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=195, num_fuzzed=740, childs=8, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x40703c,time:60, depth=1, hit_blocks=58, num_fuzzed=729, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:0,addr:0x4049be,time:60, depth=1, hit_blocks=7, num_fuzzed=674, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:0,addr:0x405a27,time:60, depth=1, hit_blocks=4, num_fuzzed=717, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:0,addr:0x4060c7,time:60, depth=1, hit_blocks=66, num_fuzzed=771, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:0,addr:0x405a08,time:60, depth=1, hit_blocks=8, num_fuzzed=762, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:6,orig:0,addr:0x4052da,time:60, depth=1, hit_blocks=7, num_fuzzed=706, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:7,orig:0,addr:0x4056e5,time:60, depth=1, hit_blocks=5, num_fuzzed=755, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:8,orig:0,addr:0x402660,time:60, depth=1, hit_blocks=2, num_fuzzed=828, childs=0, weight=1.0, burn_in=0"
+    ]
+}

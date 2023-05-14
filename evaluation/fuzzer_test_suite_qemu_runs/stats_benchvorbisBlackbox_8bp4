@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1674894016,
+    "end_time_epoch": 1674980522,
+    "start_time": "28_Jan_2023_08:20:16_UTC",
+    "runtime": 86506,
+    "coverage": 0,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 0,
+    "runs": 48396296,
+    "runs_per_sec": 559.4559452523524,
+    "cfg_updates": [
+        {
+            "timestamp": 1674894120,
+            "total_basic_blocks": 2032,
+            "total_edges": 3352
+        }
+    ],
+    "config_file_path": "/configs/vorbisBlackbox_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=2420, childs=0, weight=1.0, burn_in=0"
+    ]
+}

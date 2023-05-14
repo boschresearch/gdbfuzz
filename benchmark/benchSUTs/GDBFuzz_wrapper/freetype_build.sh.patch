@@ -1,0 +1,11 @@
+--- /tmp/2/fuzzer-test-suite/freetype2-2017/build.sh	2022-01-20 00:50:47.513729512 +0100
++++ freetype2-2017/build.sh	2021-12-16 15:48:52.000000000 +0100
+@@ -10,7 +10,7 @@
+   (cd BUILD && ./autogen.sh && ./configure --disable-shared --with-harfbuzz=no --with-bzip2=no --with-png=no && make clean && make all -j $JOBS)
+ }
+
+-get_git_revision git://git.sv.nongnu.org/freetype/freetype2.git cd02d359a6d0455e9d16b87bf9665961c4699538 SRC
++get_git_revision https://git.sv.nongnu.org/git/freetype/freetype2.git cd02d359a6d0455e9d16b87bf9665961c4699538 SRC
+ build_lib
+ build_fuzzer
+

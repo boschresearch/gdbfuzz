@@ -1,0 +1,43 @@
+{
+    "start_time_epoch": 1676049068,
+    "end_time_epoch": 1676135654,
+    "start_time": "10_Feb_2023_18:11:08_CET",
+    "runtime": 86586,
+    "coverage": 249,
+    "crashes": 0,
+    "timeouts": 1,
+    "breakpoint_interruptions": 51,
+    "runs": 742482,
+    "runs_per_sec": 8.575081421938881,
+    "cfg_updates": [
+        {
+            "timestamp": 1676049237,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1676068499,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1676081152,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1676086234,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1676087588,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        }
+    ],
+    "config_file_path": "./example_firmware/esp32_wifi_http_server/fuzz_wifi_http_no_corpus.cfg",
+    "corpus_state": [
+        "./output/esp32_http_no_corpus/trial-3/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=146, childs=0, weight=1.0, burn_in=0"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "start_time_epoch": 1676105257,
+    "end_time_epoch": 0,
+    "start_time": "11_Feb_2023_09:47:37_CET",
+    "runtime": 1097,
+    "coverage": 14,
+    "crashes": 3,
+    "timeouts": 0,
+    "breakpoint_interruptions": 10,
+    "runs": 74099,
+    "runs_per_sec": 67.54694621695533,
+    "cfg_updates": [
+        {
+            "timestamp": 1676105263,
+            "total_basic_blocks": 17,
+            "total_edges": 29
+        }
+    ],
+    "config_file_path": "./example_firmware/stm32_disco_buggy/fuzz_serial.cfg",
+    "corpus_state": [
+        "./output/stm32_buggy/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=5, num_fuzzed=14, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_buggy/trial-0/corpus/id:1,orig:0,addr:0x8003a20,time:31, depth=1, hit_blocks=3, num_fuzzed=20, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_buggy/trial-0/corpus/id:2,orig:1,addr:0x8003a26,time:74, depth=2, hit_blocks=1, num_fuzzed=15, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_buggy/trial-0/corpus/id:3,orig:2,addr:0x8003a2a,time:90, depth=3, hit_blocks=1, num_fuzzed=19, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_buggy/trial-0/corpus/id:4,orig:3,addr:0x8003a30,time:837, depth=4, hit_blocks=2, num_fuzzed=5, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_buggy/trial-0/corpus/id:5,orig:4,addr:0x8003a3a,time:899, depth=5, hit_blocks=2, num_fuzzed=3, childs=0, weight=2.0, burn_in=2"
+    ]
+}

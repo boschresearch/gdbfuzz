@@ -1,0 +1,121 @@
+[
+    {
+        "SUT_name": "boringssl",
+        "binary_file_path": "/SUTs/boringssl-2016-02-12",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/boringssl-2016-02-12/"
+    },
+    {
+        "SUT_name": "freetype2",
+        "binary_file_path": "/SUTs/freetype2-2017",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/freetype2-2017"
+    },
+    {
+        "SUT_name": "guetzli",
+        "binary_file_path": "/SUTs/guetzli-2017-3-30",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/guetzli-2017-3-30"
+    },
+    {
+        "SUT_name": "harfbuzz",
+        "binary_file_path": "/SUTs/harfbuzz-1.3.2",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/harfbuzz-1.3.2"
+    },
+    {
+        "SUT_name": "json",
+        "binary_file_path": "/SUTs/json-2017-02-12",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/json-2017-02-12"
+    },
+    {
+        "SUT_name": "lcms",
+        "binary_file_path": "/SUTs/lcms-2017-03-21",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/lcms-2017-03-21"
+    },
+    {
+        "SUT_name": "libarchive",
+        "binary_file_path": "/SUTs/libarchive-2017-01-04",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/libarchive-2017-01-04"
+    },
+    {
+        "SUT_name": "libjpeg",
+        "binary_file_path": "/SUTs/libjpeg-turbo-07-2017",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/libjpeg-turbo-07-2017"
+    },
+    {
+        "SUT_name": "libpng",
+        "binary_file_path": "/SUTs/libpng-1.2.56",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/libpng-1.2.56"
+    },
+    {
+        "SUT_name": "libssh",
+        "binary_file_path": "/SUTs/libssh-2017-1272",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": ""
+    },
+    {
+        "SUT_name": "libxml",
+        "binary_file_path": "/SUTs/libxml2-v2.9.2",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": ""
+    },
+    {
+        "SUT_name": "openssl",
+        "binary_file_path": "/SUTs/openssl-1.0.2d",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": ""
+    },
+    {
+        "SUT_name": "proj4",
+        "binary_file_path": "/SUTs/proj4-2017-08-14",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/proj4-2017-08-14"
+    },
+    {
+        "SUT_name": "re2",
+        "binary_file_path": "/SUTs/re2-2014-12-09",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": ""
+    },
+    {
+        "SUT_name": "sqlite",
+        "binary_file_path": "/SUTs/sqlite-2016-11-14",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "100000",
+        "seeds_directory": "/SUTs/seeds/sqlite-2016-11-14"
+    },
+    {
+        "SUT_name": "vorbis",
+        "binary_file_path": "/SUTs/vorbis-2017-12-11",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/vorbis-2017-12-11"
+    },
+    {
+        "SUT_name": "woff2",
+        "binary_file_path": "/SUTs/woff2-2016-05-06",
+        "entrypoint": "LLVMFuzzerTestOneInput",
+        "maximum_input_length": "20000",
+        "seeds_directory": "/SUTs/seeds/woff2-2016-05-06"
+    }
+]

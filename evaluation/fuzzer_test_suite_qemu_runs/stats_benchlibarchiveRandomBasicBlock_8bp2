@@ -1,0 +1,41 @@
+{
+    "start_time_epoch": 1674200436,
+    "end_time_epoch": 1674286986,
+    "start_time": "20_Jan_2023_07:40:36_UTC",
+    "runtime": 86550,
+    "coverage": 425,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 145,
+    "runs": 40523800,
+    "runs_per_sec": 468.212593876372,
+    "cfg_updates": [
+        {
+            "timestamp": 1674200585,
+            "total_basic_blocks": 660,
+            "total_edges": 1040
+        },
+        {
+            "timestamp": 1674201516,
+            "total_basic_blocks": 661,
+            "total_edges": 1041
+        },
+        {
+            "timestamp": 1674202446,
+            "total_basic_blocks": 662,
+            "total_edges": 1042
+        }
+    ],
+    "config_file_path": "/configs/libarchiveRandomBasicBlock_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=322, num_fuzzed=217, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x4087dd,time:180, depth=1, hit_blocks=46, num_fuzzed=259, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:1,addr:0x4068b7,time:403, depth=2, hit_blocks=3, num_fuzzed=249, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:0,addr:0x432e77,time:778, depth=1, hit_blocks=13, num_fuzzed=211, childs=3, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:3,addr:0x4388e2,time:872, depth=2, hit_blocks=26, num_fuzzed=231, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:2,addr:0x432c5e,time:1170, depth=3, hit_blocks=10, num_fuzzed=236, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:6,orig:3,addr:0x432e59,time:3546, depth=2, hit_blocks=1, num_fuzzed=215, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:7,orig:3,addr:0x438789,time:12984, depth=2, hit_blocks=3, num_fuzzed=207, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:8,orig:6,addr:0x432e5f,time:15061, depth=3, hit_blocks=1, num_fuzzed=201, childs=0, weight=1.0, burn_in=0"
+    ]
+}

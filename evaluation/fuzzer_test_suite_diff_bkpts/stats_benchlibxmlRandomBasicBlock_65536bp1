@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1676291802,
+    "end_time_epoch": 1676378451,
+    "start_time": "13_Feb_2023_12:36:42_UTC",
+    "runtime": 86649,
+    "coverage": 0,
+    "crashes": 0,
+    "timeouts": 1136,
+    "breakpoint_interruptions": 0,
+    "runs": 1136,
+    "runs_per_sec": 0.013110364805133353,
+    "cfg_updates": [
+        {
+            "timestamp": 1676292015,
+            "total_basic_blocks": 1991,
+            "total_edges": 3303
+        }
+    ],
+    "config_file_path": "/configs/libxmlRandomBasicBlock_65536bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=1136, childs=0, weight=1.0, burn_in=0"
+    ]
+}

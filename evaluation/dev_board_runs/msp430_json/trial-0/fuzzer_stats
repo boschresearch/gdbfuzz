@@ -1,0 +1,45 @@
+{
+    "start_time_epoch": 1674203374,
+    "end_time_epoch": 1674289781,
+    "start_time": "20_Jan_2023_09:29:34_CET",
+    "runtime": 86407,
+    "coverage": 175,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 89,
+    "runs": 132130,
+    "runs_per_sec": 1.52915851724976,
+    "cfg_updates": [
+        {
+            "timestamp": 1674203380,
+            "total_basic_blocks": 189,
+            "total_edges": 284
+        }
+    ],
+    "config_file_path": "./example_firmware/msp430_arduinojson/fuzz_serial.cfg",
+    "corpus_state": [
+        "./output/msp430_json/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=33, num_fuzzed=63, childs=4, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:1,orig:0,addr:0x48ca,time:15, depth=1, hit_blocks=30, num_fuzzed=76, childs=3, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:2,orig:0,addr:0x4b90,time:19, depth=1, hit_blocks=22, num_fuzzed=64, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:3,orig:0,addr:0x4586,time:28, depth=1, hit_blocks=6, num_fuzzed=66, childs=3, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:4,orig:0,addr:0x4966,time:46, depth=1, hit_blocks=18, num_fuzzed=74, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:5,orig:3,addr:0x4aac,time:119, depth=2, hit_blocks=8, num_fuzzed=64, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:6,orig:3,addr:0x4950,time:123, depth=2, hit_blocks=6, num_fuzzed=72, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:7,orig:1,addr:0x4938,time:277, depth=2, hit_blocks=9, num_fuzzed=68, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:8,orig:1,addr:0x4612,time:298, depth=2, hit_blocks=2, num_fuzzed=70, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:9,orig:1,addr:0x4a6c,time:492, depth=2, hit_blocks=2, num_fuzzed=73, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:10,orig:2,addr:0x49be,time:914, depth=2, hit_blocks=1, num_fuzzed=76, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:11,orig:10,addr:0x4926,time:1765, depth=3, hit_blocks=1, num_fuzzed=64, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:12,orig:8,addr:0x4b58,time:2459, depth=3, hit_blocks=2, num_fuzzed=64, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:13,orig:9,addr:0x4acc,time:2552, depth=3, hit_blocks=7, num_fuzzed=64, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:14,orig:3,addr:0x4a36,time:2920, depth=2, hit_blocks=1, num_fuzzed=53, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:15,orig:13,addr:0x4c0c,time:3373, depth=4, hit_blocks=3, num_fuzzed=75, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:16,orig:13,addr:0x49ee,time:3763, depth=4, hit_blocks=1, num_fuzzed=64, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:17,orig:16,addr:0x4a84,time:4524, depth=5, hit_blocks=1, num_fuzzed=61, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:18,orig:8,addr:0x473e,time:21084, depth=3, hit_blocks=6, num_fuzzed=56, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:19,orig:18,addr:0x482c,time:68347, depth=4, hit_blocks=12, num_fuzzed=16, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:20,orig:19,addr:0x4816,time:73053, depth=5, hit_blocks=1, num_fuzzed=9, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:21,orig:20,addr:0x4858,time:73224, depth=6, hit_blocks=2, num_fuzzed=11, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-0/corpus/id:22,orig:21,addr:0x47f2,time:75176, depth=7, hit_blocks=1, num_fuzzed=7, childs=0, weight=1.0, burn_in=0"
+    ]
+}

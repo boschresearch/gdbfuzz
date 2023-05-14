@@ -1,0 +1,46 @@
+{
+    "start_time_epoch": 1676443502,
+    "end_time_epoch": 1676529932,
+    "start_time": "15_Feb_2023_07:45:02_CET",
+    "runtime": 86430,
+    "coverage": 198,
+    "crashes": 5,
+    "timeouts": 1,
+    "breakpoint_interruptions": 44,
+    "runs": 11372823,
+    "runs_per_sec": 131.58420687261366,
+    "cfg_updates": [
+        {
+            "timestamp": 1676443516,
+            "total_basic_blocks": 402,
+            "total_edges": 549
+        },
+        {
+            "timestamp": 1676451482,
+            "total_basic_blocks": 402,
+            "total_edges": 549
+        }
+    ],
+    "config_file_path": "./example_firmware/CY8CKIT_wifi_http_server/fuzz_http_server.cfg",
+    "corpus_state": [
+        "./output/cy8ckit_http/trial-10/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=86, num_fuzzed=832, childs=16, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:1,orig:0,addr:0x1000c674,timestamp:96, depth=1, hit_blocks=36, num_fuzzed=871, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:2,orig:0,addr:0x1000d3f2,timestamp:800, depth=1, hit_blocks=19, num_fuzzed=790, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:3,orig:0,addr:0x1000cd14,timestamp:1787, depth=1, hit_blocks=9, num_fuzzed=770, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:4,orig:0,addr:0x1000ce4e,timestamp:1963, depth=1, hit_blocks=3, num_fuzzed=779, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:5,orig:0,addr:0x1000cd98,timestamp:3284, depth=1, hit_blocks=3, num_fuzzed=662, childs=1, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:6,orig:0,addr:0x1000c59a,timestamp:3674, depth=1, hit_blocks=9, num_fuzzed=723, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:7,orig:0,addr:0x1000cda6,timestamp:4767, depth=1, hit_blocks=2, num_fuzzed=711, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:8,orig:0,addr:0x1000caec,timestamp:7621, depth=1, hit_blocks=5, num_fuzzed=612, childs=1, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:9,orig:0,addr:0x1000cd68,timestamp:7920, depth=1, hit_blocks=8, num_fuzzed=609, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:10,orig:8,addr:0x1000cdde,timestamp:10960, depth=2, hit_blocks=3, num_fuzzed=627, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:11,orig:0,addr:0x1000d4cc,timestamp:14215, depth=1, hit_blocks=5, num_fuzzed=527, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:12,orig:0,addr:0x1000c912,timestamp:16933, depth=1, hit_blocks=2, num_fuzzed=490, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:13,orig:0,addr:0x1000c63c,timestamp:25722, depth=1, hit_blocks=2, num_fuzzed=461, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:14,orig:0,addr:0x1000ce4a,timestamp:26997, depth=1, hit_blocks=1, num_fuzzed=433, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:15,orig:5,addr:0x1000c99a,timestamp:29299, depth=2, hit_blocks=2, num_fuzzed=409, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:16,orig:0,addr:0x1000ce8e,timestamp:32536, depth=1, hit_blocks=1, num_fuzzed=382, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:17,orig:0,addr:0x1000bbd8,timestamp:33145, depth=1, hit_blocks=1, num_fuzzed=390, childs=0, weight=1.0, burn_in=0",
+        "./output/cy8ckit_http/trial-10/corpus/id:18,orig:0,addr:0x1000cef4,timestamp:45565, depth=1, hit_blocks=1, num_fuzzed=293, childs=0, weight=1.0, burn_in=0"
+    ]
+}

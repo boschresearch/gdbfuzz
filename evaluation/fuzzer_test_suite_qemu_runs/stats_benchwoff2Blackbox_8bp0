@@ -1,0 +1,28 @@
+{
+    "start_time_epoch": 1674895343,
+    "end_time_epoch": 1674981860,
+    "start_time": "28_Jan_2023_08:42:23_UTC",
+    "runtime": 86517,
+    "coverage": 0,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 0,
+    "runs": 358894404,
+    "runs_per_sec": 4148.252990741704,
+    "cfg_updates": [
+        {
+            "timestamp": 1674895459,
+            "total_basic_blocks": 2704,
+            "total_edges": 4238
+        }
+    ],
+    "config_file_path": "/configs/woff2Blackbox_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3062, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=2959, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=2942, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=2998, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3028, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=2956, childs=0, weight=1.0, burn_in=0"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "start_time_epoch": 1675880695,
+    "end_time_epoch": 1675967126,
+    "start_time": "08_Feb_2023_19:24:55_CET",
+    "runtime": 86431,
+    "coverage": 269,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 98,
+    "runs": 4408615,
+    "runs_per_sec": 51.00733533107334,
+    "cfg_updates": [
+        {
+            "timestamp": 1675880708,
+            "total_basic_blocks": 428,
+            "total_edges": 643
+        },
+        {
+            "timestamp": 1675881658,
+            "total_basic_blocks": 428,
+            "total_edges": 643
+        }
+    ],
+    "config_file_path": "./example_firmware/stm32_disco_arduinojson/fuzz_serial_json_no_corpus.cfg",
+    "corpus_state": [
+        "./output/stm32_disco_arduinojson_no_corpus/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=4383, childs=0, weight=1.0, burn_in=0"
+    ]
+}

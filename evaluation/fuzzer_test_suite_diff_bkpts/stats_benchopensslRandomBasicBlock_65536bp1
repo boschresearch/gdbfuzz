@@ -1,0 +1,37 @@
+{
+    "start_time_epoch": 1676291812,
+    "end_time_epoch": 1676378284,
+    "start_time": "13_Feb_2023_12:36:52_UTC",
+    "runtime": 86472,
+    "coverage": 290,
+    "crashes": 6655,
+    "timeouts": 0,
+    "breakpoint_interruptions": 290,
+    "runs": 467049,
+    "runs_per_sec": 5.401158756591729,
+    "cfg_updates": [
+        {
+            "timestamp": 1676291879,
+            "total_basic_blocks": 624,
+            "total_edges": 1003
+        },
+        {
+            "timestamp": 1676292838,
+            "total_basic_blocks": 628,
+            "total_edges": 1009
+        }
+    ],
+    "config_file_path": "/configs/opensslRandomBasicBlock_65536bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=2, num_fuzzed=662, childs=8, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x401794,time:71, depth=1, hit_blocks=121, num_fuzzed=690, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:0,addr:0x405151,time:72, depth=1, hit_blocks=114, num_fuzzed=675, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:0,addr:0x404c19,time:72, depth=1, hit_blocks=43, num_fuzzed=678, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:0,addr:0x4050bf,time:73, depth=1, hit_blocks=1, num_fuzzed=625, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:0,addr:0x405187,time:73, depth=1, hit_blocks=2, num_fuzzed=674, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:6,orig:0,addr:0x404cb1,time:73, depth=1, hit_blocks=2, num_fuzzed=643, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:7,orig:0,addr:0x401a9e,time:73, depth=1, hit_blocks=3, num_fuzzed=680, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:8,orig:0,addr:0x41486f,time:73, depth=1, hit_blocks=1, num_fuzzed=665, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:9,orig:6,addr:0x4018cb,time:187, depth=2, hit_blocks=1, num_fuzzed=683, childs=0, weight=1.0, burn_in=0"
+    ]
+}

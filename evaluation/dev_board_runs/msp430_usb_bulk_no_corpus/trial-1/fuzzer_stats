@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1675753589,
+    "end_time_epoch": 1675840019,
+    "start_time": "07_Feb_2023_08:06:29_CET",
+    "runtime": 86430,
+    "coverage": 310,
+    "crashes": 0,
+    "timeouts": 88,
+    "breakpoint_interruptions": 103,
+    "runs": 405263,
+    "runs_per_sec": 4.68891588568784,
+    "cfg_updates": [
+        {
+            "timestamp": 1675753601,
+            "total_basic_blocks": 552,
+            "total_edges": 882
+        }
+    ],
+    "config_file_path": "./example_firmware/msp430_usb_msc/fuzz_usb_bulk_no_corpus.cfg",
+    "corpus_state": [
+        "./output/msp430_usb_bulk_no_corpus//trial-1/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=2063, childs=0, weight=1.0, burn_in=0"
+    ]
+}

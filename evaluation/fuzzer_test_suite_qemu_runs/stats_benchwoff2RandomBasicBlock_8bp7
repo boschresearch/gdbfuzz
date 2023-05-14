@@ -1,0 +1,28 @@
+{
+    "start_time_epoch": 1674894572,
+    "end_time_epoch": 1674981085,
+    "start_time": "28_Jan_2023_08:29:32_UTC",
+    "runtime": 86513,
+    "coverage": 22,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 8,
+    "runs": 383626928,
+    "runs_per_sec": 4434.326956642354,
+    "cfg_updates": [
+        {
+            "timestamp": 1674894683,
+            "total_basic_blocks": 2704,
+            "total_edges": 4238
+        }
+    ],
+    "config_file_path": "/configs/woff2RandomBasicBlock_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=22, num_fuzzed=3278, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3191, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3178, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3193, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3084, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3258, childs=0, weight=1.0, burn_in=0"
+    ]
+}

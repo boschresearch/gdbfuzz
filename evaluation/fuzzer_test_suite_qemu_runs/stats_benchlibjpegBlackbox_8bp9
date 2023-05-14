@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1674287400,
+    "end_time_epoch": 1674373947,
+    "start_time": "21_Jan_2023_07:50:00_UTC",
+    "runtime": 86547,
+    "coverage": 0,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 0,
+    "runs": 134620001,
+    "runs_per_sec": 1555.455428842132,
+    "cfg_updates": [
+        {
+            "timestamp": 1674287545,
+            "total_basic_blocks": 899,
+            "total_edges": 1385
+        }
+    ],
+    "config_file_path": "/configs/libjpegBlackbox_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=6732, childs=0, weight=1.0, burn_in=0"
+    ]
+}

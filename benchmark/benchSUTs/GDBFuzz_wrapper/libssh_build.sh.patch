@@ -1,0 +1,13 @@
+diff --git a/libssh-2017-1272/build.sh b/libssh-2017-1272/build.sh
+index e898612..f124192 100755
+--- a/libssh-2017-1272/build.sh
++++ b/libssh-2017-1272/build.sh
+@@ -21,7 +21,7 @@ build_lib() {
+   )
+ }
+ 
+-get_git_revision git://git.libssh.org/projects/libssh.git 7c79b5c154ce2788cf5254a62468fee5112f7640 SRC
++get_git_revision https://git.libssh.org/projects/libssh.git 7c79b5c154ce2788cf5254a62468fee5112f7640 SRC
+ build_lib
+ build_fuzzer
+ 

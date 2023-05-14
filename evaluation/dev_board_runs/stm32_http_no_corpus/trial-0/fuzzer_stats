@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1675358668,
+    "end_time_epoch": 1675445095,
+    "start_time": "02_Feb_2023_18:24:28_CET",
+    "runtime": 86427,
+    "coverage": 80,
+    "crashes": 0,
+    "timeouts": 167,
+    "breakpoint_interruptions": 41,
+    "runs": 3051516,
+    "runs_per_sec": 35.30743864764484,
+    "cfg_updates": [
+        {
+            "timestamp": 1675358677,
+            "total_basic_blocks": 166,
+            "total_edges": 249
+        }
+    ],
+    "config_file_path": "./example_firmware/stm32_disco_wifi_http_server/stm32_fuzz_wifi_server_no_corpus.cfg",
+    "corpus_state": [
+        "./output/stm32_http_no_corpus/trial-3/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3111, childs=0, weight=1.0, burn_in=0"
+    ]
+}

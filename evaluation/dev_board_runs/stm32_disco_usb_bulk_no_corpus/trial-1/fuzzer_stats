@@ -1,0 +1,28 @@
+{
+    "start_time_epoch": 1676272968,
+    "end_time_epoch": 1676359437,
+    "start_time": "13_Feb_2023_08:22:48_CET",
+    "runtime": 86469,
+    "coverage": 56,
+    "crashes": 0,
+    "timeouts": 8,
+    "breakpoint_interruptions": 27,
+    "runs": 270912,
+    "runs_per_sec": 3.1330534642473027,
+    "cfg_updates": [
+        {
+            "timestamp": 1676273019,
+            "total_basic_blocks": 90,
+            "total_edges": 134
+        },
+        {
+            "timestamp": 1676273962,
+            "total_basic_blocks": 90,
+            "total_edges": 134
+        }
+    ],
+    "config_file_path": "./example_firmware/stm32_disco_usb_client/stm32_fuzz_usb_bulk_no_corpus.cfg",
+    "corpus_state": [
+        "./output/stm32_disco_usb_bulk_no_corpus/trial-1/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=2713, childs=0, weight=1.0, burn_in=0"
+    ]
+}

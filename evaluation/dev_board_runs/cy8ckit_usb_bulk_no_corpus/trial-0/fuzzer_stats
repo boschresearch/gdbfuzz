@@ -1,0 +1,21 @@
+{
+    "start_time_epoch": 1674082134,
+    "end_time_epoch": 0,
+    "start_time": "18_Jan_2023_23:48:54_CET",
+    "runtime": 86400,
+    "coverage": 221,
+    "crashes": 0,
+    "timeouts": 0,
+    "runs_per_sec": 0.22727272727272727,
+    "cfg_updates": [
+        {
+            "timestamp": 1674082200,
+            "total_basic_blocks": 421,
+            "total_edges": 612
+        }
+    ],
+    "config_file_path": "./example_firmware/CY8CKIT_usb_msc/cy8ckit_fuzz_usb_bulk_no_corpus.cfg",
+    "corpus_state": [
+        "./output/cy8ckit_usb_bulk_no_corpus/trial-0/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=1, childs=0, weight=5.0, burn_in=4"
+    ]
+}

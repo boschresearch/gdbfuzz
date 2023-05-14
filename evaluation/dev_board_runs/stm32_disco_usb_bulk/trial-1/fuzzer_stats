@@ -1,0 +1,62 @@
+{
+    "start_time_epoch": 1676196316,
+    "end_time_epoch": 0,
+    "start_time": "12_Feb_2023_11:05:16_CET",
+    "runtime": 76029,
+    "coverage": 214,
+    "crashes": 0,
+    "timeouts": 249,
+    "breakpoint_interruptions": 74,
+    "runs": 152958,
+    "runs_per_sec": 2.0118375882886794,
+    "cfg_updates": [
+        {
+            "timestamp": 1676196371,
+            "total_basic_blocks": 90,
+            "total_edges": 134
+        },
+        {
+            "timestamp": 1676197340,
+            "total_basic_blocks": 516,
+            "total_edges": 768
+        },
+        {
+            "timestamp": 1676203496,
+            "total_basic_blocks": 517,
+            "total_edges": 769
+        },
+        {
+            "timestamp": 1676213897,
+            "total_basic_blocks": 518,
+            "total_edges": 770
+        },
+        {
+            "timestamp": 1676240450,
+            "total_basic_blocks": 518,
+            "total_edges": 771
+        },
+        {
+            "timestamp": 1676257746,
+            "total_basic_blocks": 518,
+            "total_edges": 772
+        }
+    ],
+    "config_file_path": "./example_firmware/stm32_disco_usb_client/stm32_fuzz_usb_bulk.cfg",
+    "corpus_state": [
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=67, num_fuzzed=159, childs=5, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:1,orig:0,addr:0x8004806,timestamp:160, depth=1, hit_blocks=44, num_fuzzed=137, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:2,orig:0,addr:0x8008266,timestamp:239, depth=1, hit_blocks=3, num_fuzzed=153, childs=0, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:3,orig:0,addr:0x80093b0,timestamp:1742, depth=1, hit_blocks=6, num_fuzzed=162, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:4,orig:3,addr:0x80098ac,timestamp:1971, depth=2, hit_blocks=16, num_fuzzed=140, childs=0, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:5,orig:0,addr:0x8009414,timestamp:3051, depth=1, hit_blocks=7, num_fuzzed=153, childs=0, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:6,orig:0,addr:0x80093c8,timestamp:4421, depth=1, hit_blocks=4, num_fuzzed=140, childs=0, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:7,orig:1,addr:0x8009910,timestamp:7114, depth=2, hit_blocks=12, num_fuzzed=107, childs=3, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:8,orig:7,addr:0x8009894,timestamp:7441, depth=3, hit_blocks=2, num_fuzzed=138, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:9,orig:7,addr:0x80098d8,timestamp:16015, depth=3, hit_blocks=2, num_fuzzed=86, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:10,orig:7,addr:0x800a0b2,timestamp:17107, depth=3, hit_blocks=8, num_fuzzed=102, childs=0, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:11,orig:9,addr:0x8009d4e,timestamp:17217, depth=4, hit_blocks=18, num_fuzzed=91, childs=0, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:12,orig:8,addr:0x800a210,timestamp:36736, depth=4, hit_blocks=8, num_fuzzed=56, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:13,orig:12,addr:0x800a2c0,timestamp:44048, depth=5, hit_blocks=11, num_fuzzed=35, childs=1, weight=1.0, burn_in=0",
+        "./output/stm32_disco_usb_bulk//trial-1/corpus/id:14,orig:13,addr:0x800a16a,timestamp:61344, depth=6, hit_blocks=6, num_fuzzed=16, childs=0, weight=1.0, burn_in=0"
+    ]
+}

@@ -1,0 +1,49 @@
+--- /tmp/2/fuzzer-test-suite/common.sh	2022-01-20 22:29:42.562193302 +0100
++++ common.sh	2022-01-20 22:59:41.701373891 +0100
+@@ -7,19 +7,19 @@
+
+ # Ensure that fuzzing engine, if defined, is valid
+ FUZZING_ENGINE=${FUZZING_ENGINE:-"fsanitize_fuzzer"}
+-POSSIBLE_FUZZING_ENGINE="libfuzzer afl honggfuzz coverage fsanitize_fuzzer hooks"
++POSSIBLE_FUZZING_ENGINE="libfuzzer afl honggfuzz coverage fsanitize_fuzzer hooks GDBFuzz GDBFuzz_static"
+ !(echo "$POSSIBLE_FUZZING_ENGINE" | grep -w "$FUZZING_ENGINE" > /dev/null) && \
+   echo "USAGE: Error: If defined, FUZZING_ENGINE should be one of the following:
+   $POSSIBLE_FUZZING_ENGINE. However, it was defined as $FUZZING_ENGINE" && exit 1
+
+ SCRIPT_DIR=$(dirname $0)
+-EXECUTABLE_NAME_BASE=$(basename $SCRIPT_DIR)-${FUZZING_ENGINE}
++EXECUTABLE_NAME_BASE="main"
+ LIBFUZZER_SRC=${LIBFUZZER_SRC:-$(dirname $(dirname $SCRIPT_DIR))/Fuzzer}
+ STANDALONE_TARGET=0
+ AFL_SRC=${AFL_SRC:-$(dirname $(dirname $SCRIPT_DIR))/AFL}
+ HONGGFUZZ_SRC=${HONGGFUZZ_SRC:-$(dirname $(dirname $SCRIPT_DIR))/honggfuzz}
+ COVERAGE_FLAGS="-O0 -fsanitize-coverage=trace-pc-guard"
+-FUZZ_CXXFLAGS="-O2 -fno-omit-frame-pointer -gline-tables-only -fsanitize=address -fsanitize-address-use-after-scope -fsanitize-coverage=trace-pc-guard,trace-cmp,trace-gep,trace-div"
++FUZZ_CXXFLAGS="-O2 -fno-omit-frame-pointer -gline-tables-only"
+ CORPUS=CORPUS-$EXECUTABLE_NAME_BASE
+ JOBS=${JOBS:-"8"}
+
+@@ -30,7 +30,7 @@
+ export LIB_FUZZING_ENGINE="libFuzzingEngine-${FUZZING_ENGINE}.a"
+
+ if [[ $FUZZING_ENGINE == "fsanitize_fuzzer" ]]; then
+-  FSANITIZE_FUZZER_FLAGS="-O2 -fno-omit-frame-pointer -gline-tables-only -fsanitize=address,fuzzer-no-link -fsanitize-address-use-after-scope"
++  FSANITIZE_FUZZER_FLAGS="-O2 -fno-omit-frame-pointer -gline-tables-only"
+   export CFLAGS=${CFLAGS:-$FSANITIZE_FUZZER_FLAGS}
+   export CXXFLAGS=${CXXFLAGS:-$FSANITIZE_FUZZER_FLAGS}
+ elif [[ $FUZZING_ENGINE == "honggfuzz" ]]; then
+@@ -100,6 +100,14 @@
+   $CXX -c $HOOKS_FILE -o $LIB_FUZZING_ENGINE
+ }
+
++build_GDBFuzz_static() {
++  LIB_FUZZING_ENGINE="-static -I .. ../main.c ../namedpipe.c"
++}
++
++build_GDBFuzz() {
++  LIB_FUZZING_ENGINE="-I .. ../main.c ../namedpipe.c -ldl"
++}
++
+ build_fuzzer() {
+   echo "Building with $FUZZING_ENGINE"
+   build_${FUZZING_ENGINE}

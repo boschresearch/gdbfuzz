@@ -1,0 +1,59 @@
+{
+    "start_time_epoch": 1675329712,
+    "end_time_epoch": 1675416141,
+    "start_time": "02_Feb_2023_10:21:52_CET",
+    "runtime": 86429,
+    "coverage": 404,
+    "crashes": 0,
+    "timeouts": 60,
+    "breakpoint_interruptions": 141,
+    "runs": 296587,
+    "runs_per_sec": 3.4315681079267377,
+    "cfg_updates": [
+        {
+            "timestamp": 1675329724,
+            "total_basic_blocks": 529,
+            "total_edges": 856
+        },
+        {
+            "timestamp": 1675330709,
+            "total_basic_blocks": 552,
+            "total_edges": 882
+        },
+        {
+            "timestamp": 1675369595,
+            "total_basic_blocks": 552,
+            "total_edges": 882
+        }
+    ],
+    "config_file_path": "./example_firmware/msp430_usb_msc/fuzz_usb_bulk.cfg",
+    "corpus_state": [
+        "./output/msp430_usb_bulk//trial-5/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=184, num_fuzzed=71, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:1,orig:0,addr:0x7576,timestamp:70, depth=1, hit_blocks=49, num_fuzzed=72, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:2,orig:0,addr:0x5e36,timestamp:541, depth=1, hit_blocks=11, num_fuzzed=61, childs=3, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:3,orig:2,addr:0x5128,timestamp:652, depth=2, hit_blocks=13, num_fuzzed=70, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:4,orig:2,addr:0x513e,timestamp:687, depth=2, hit_blocks=9, num_fuzzed=56, childs=3, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:5,orig:3,addr:0x5008,timestamp:760, depth=3, hit_blocks=11, num_fuzzed=66, childs=4, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:6,orig:4,addr:0x5e70,timestamp:845, depth=3, hit_blocks=14, num_fuzzed=70, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:7,orig:5,addr:0x5850,timestamp:1067, depth=4, hit_blocks=10, num_fuzzed=64, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:8,orig:5,addr:0x576c,timestamp:1092, depth=4, hit_blocks=6, num_fuzzed=69, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:9,orig:7,addr:0x7ebe,timestamp:1298, depth=5, hit_blocks=4, num_fuzzed=65, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:10,orig:5,addr:0x6cc4,timestamp:1912, depth=4, hit_blocks=3, num_fuzzed=66, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:11,orig:4,addr:0x7ba4,timestamp:2229, depth=3, hit_blocks=11, num_fuzzed=62, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:12,orig:11,addr:0x7ff6,timestamp:3118, depth=4, hit_blocks=4, num_fuzzed=70, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:13,orig:4,addr:0x6178,timestamp:4732, depth=3, hit_blocks=14, num_fuzzed=53, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:14,orig:9,addr:0x5056,timestamp:4966, depth=6, hit_blocks=3, num_fuzzed=60, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:15,orig:13,addr:0x618a,timestamp:7067, depth=4, hit_blocks=4, num_fuzzed=56, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:16,orig:11,addr:0x5a78,timestamp:7327, depth=4, hit_blocks=3, num_fuzzed=70, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:17,orig:16,addr:0x5e5e,timestamp:10662, depth=5, hit_blocks=3, num_fuzzed=58, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:18,orig:17,addr:0x617c,timestamp:11727, depth=6, hit_blocks=1, num_fuzzed=50, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:19,orig:8,addr:0x5e66,timestamp:15255, depth=5, hit_blocks=1, num_fuzzed=42, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:20,orig:18,addr:0x6190,timestamp:16733, depth=7, hit_blocks=2, num_fuzzed=49, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:21,orig:18,addr:0x7d94,timestamp:16868, depth=7, hit_blocks=6, num_fuzzed=41, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:22,orig:2,addr:0x5e56,timestamp:30875, depth=2, hit_blocks=2, num_fuzzed=38, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:23,orig:13,addr:0x50c0,timestamp:34140, depth=4, hit_blocks=5, num_fuzzed=41, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:24,orig:5,addr:0x45e6,timestamp:39831, depth=4, hit_blocks=23, num_fuzzed=23, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:25,orig:24,addr:0x4914,timestamp:40378, depth=5, hit_blocks=7, num_fuzzed=32, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_usb_bulk//trial-5/corpus/id:26,orig:24,addr:0x451e,timestamp:50030, depth=5, hit_blocks=1, num_fuzzed=27, childs=0, weight=1.0, burn_in=0"
+    ]
+}

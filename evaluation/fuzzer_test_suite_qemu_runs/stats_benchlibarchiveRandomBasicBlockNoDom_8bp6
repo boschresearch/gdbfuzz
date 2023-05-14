@@ -1,0 +1,39 @@
+{
+    "start_time_epoch": 1674200490,
+    "end_time_epoch": 1674286986,
+    "start_time": "20_Jan_2023_07:41:30_UTC",
+    "runtime": 86496,
+    "coverage": 421,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 421,
+    "runs": 64549872,
+    "runs_per_sec": 746.2758046614872,
+    "cfg_updates": [
+        {
+            "timestamp": 1674200585,
+            "total_basic_blocks": 660,
+            "total_edges": 1040
+        },
+        {
+            "timestamp": 1674201523,
+            "total_basic_blocks": 662,
+            "total_edges": 1042
+        }
+    ],
+    "config_file_path": "/configs/libarchiveRandomBasicBlockNoDom_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=271, num_fuzzed=329, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x4103b1,time:98, depth=1, hit_blocks=63, num_fuzzed=255, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:1,addr:0x406710,time:113, depth=2, hit_blocks=9, num_fuzzed=245, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:0,addr:0x409c5d,time:172, depth=1, hit_blocks=3, num_fuzzed=223, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:2,addr:0x432e7c,time:246, depth=3, hit_blocks=14, num_fuzzed=272, childs=3, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:3,addr:0x40a690,time:326, depth=2, hit_blocks=8, num_fuzzed=265, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:6,orig:4,addr:0x438a23,time:345, depth=4, hit_blocks=30, num_fuzzed=285, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:7,orig:4,addr:0x432c5e,time:600, depth=4, hit_blocks=12, num_fuzzed=270, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:8,orig:4,addr:0x43881d,time:600, depth=4, hit_blocks=7, num_fuzzed=288, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:9,orig:8,addr:0x407544,time:840, depth=5, hit_blocks=2, num_fuzzed=274, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:10,orig:9,addr:0x432e5f,time:2118, depth=6, hit_blocks=1, num_fuzzed=260, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:11,orig:7,addr:0x432e59,time:4012, depth=5, hit_blocks=1, num_fuzzed=262, childs=0, weight=1.0, burn_in=0"
+    ]
+}

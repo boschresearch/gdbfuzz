@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1674460703,
+    "end_time_epoch": 1674547240,
+    "start_time": "23_Jan_2023_07:58:23_UTC",
+    "runtime": 86537,
+    "coverage": 0,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 0,
+    "runs": 60269778,
+    "runs_per_sec": 696.4625304782925,
+    "cfg_updates": [
+        {
+            "timestamp": 1674460839,
+            "total_basic_blocks": 2654,
+            "total_edges": 4343
+        }
+    ],
+    "config_file_path": "/configs/libsshBlackbox_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3014, childs=0, weight=1.0, burn_in=0"
+    ]
+}

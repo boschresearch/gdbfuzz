@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1676192450,
+    "end_time_epoch": 1676278856,
+    "start_time": "12_Feb_2023_10:00:50_CET",
+    "runtime": 86406,
+    "coverage": 145,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 75,
+    "runs": 133394,
+    "runs_per_sec": 1.5438048283684003,
+    "cfg_updates": [
+        {
+            "timestamp": 1676192455,
+            "total_basic_blocks": 189,
+            "total_edges": 284
+        }
+    ],
+    "config_file_path": "./example_firmware/msp430_arduinojson/fuzz_serial_no_corpus.cfg",
+    "corpus_state": [
+        "./output/msp430_json_no_corpus/trial-1/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=1320, childs=0, weight=1.0, burn_in=0"
+    ]
+}

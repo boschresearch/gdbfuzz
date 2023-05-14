@@ -1,0 +1,28 @@
+{
+    "start_time_epoch": 1676291835,
+    "end_time_epoch": 1676379430,
+    "start_time": "13_Feb_2023_12:37:15_UTC",
+    "runtime": 87595,
+    "coverage": 4632,
+    "crashes": 0,
+    "timeouts": 58,
+    "breakpoint_interruptions": 4539,
+    "runs": 61,
+    "runs_per_sec": 0.0006963867800673554,
+    "cfg_updates": [
+        {
+            "timestamp": 1676292669,
+            "total_basic_blocks": 36541,
+            "total_edges": 58972
+        },
+        {
+            "timestamp": 1676299260,
+            "total_basic_blocks": 37367,
+            "total_edges": 60363
+        }
+    ],
+    "config_file_path": "/configs/sqliteRandomBasicBlock_65536bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=4632, num_fuzzed=60, childs=0, weight=1.0, burn_in=0"
+    ]
+}

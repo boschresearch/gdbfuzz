@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1675967596,
+    "end_time_epoch": 1676054174,
+    "start_time": "09_Feb_2023_19:33:16_CET",
+    "runtime": 86578,
+    "coverage": 70,
+    "crashes": 4,
+    "timeouts": 1,
+    "breakpoint_interruptions": 14,
+    "runs": 11656176,
+    "runs_per_sec": 134.63207743306614,
+    "cfg_updates": [
+        {
+            "timestamp": 1675967758,
+            "total_basic_blocks": 402,
+            "total_edges": 549
+        }
+    ],
+    "config_file_path": "./example_firmware/CY8CKIT_wifi_http_server/fuzz_http_server_no_corpus.cfg",
+    "corpus_state": [
+        "./output/cy8ckit_http_no_corpus/trial-0/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=11657, childs=0, weight=1.0, burn_in=0"
+    ]
+}

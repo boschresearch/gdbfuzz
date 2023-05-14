@@ -1,0 +1,57 @@
+{
+    "start_time_epoch": 1675441166,
+    "end_time_epoch": 1675527908,
+    "start_time": "03_Feb_2023_16:19:26_UTC",
+    "runtime": 86742,
+    "coverage": 723,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 267,
+    "runs": 80023798,
+    "runs_per_sec": 922.5496068801734,
+    "cfg_updates": [
+        {
+            "timestamp": 1675441507,
+            "total_basic_blocks": 1991,
+            "total_edges": 3303
+        },
+        {
+            "timestamp": 1675442513,
+            "total_basic_blocks": 1992,
+            "total_edges": 3307
+        },
+        {
+            "timestamp": 1675443477,
+            "total_basic_blocks": 1992,
+            "total_edges": 3308
+        },
+        {
+            "timestamp": 1675445798,
+            "total_basic_blocks": 1992,
+            "total_edges": 3309
+        },
+        {
+            "timestamp": 1675447810,
+            "total_basic_blocks": 1992,
+            "total_edges": 3310
+        }
+    ],
+    "config_file_path": "/configs/libxmlRandomBasicBlock_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=478, num_fuzzed=334, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x42e14c,time:356, depth=1, hit_blocks=40, num_fuzzed=277, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:1,addr:0x4b4701,time:383, depth=2, hit_blocks=89, num_fuzzed=275, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:1,addr:0x402dcf,time:401, depth=2, hit_blocks=15, num_fuzzed=295, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:2,addr:0x41fd70,time:468, depth=3, hit_blocks=49, num_fuzzed=304, childs=3, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:4,addr:0x403031,time:633, depth=4, hit_blocks=21, num_fuzzed=297, childs=3, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:6,orig:5,addr:0x402ea1,time:989, depth=5, hit_blocks=5, num_fuzzed=344, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:7,orig:0,addr:0x4029ba,time:2690, depth=1, hit_blocks=1, num_fuzzed=311, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:8,orig:5,addr:0x4b4418,time:4032, depth=5, hit_blocks=1, num_fuzzed=273, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:9,orig:4,addr:0x402970,time:5100, depth=4, hit_blocks=1, num_fuzzed=257, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:10,orig:4,addr:0x41ff64,time:6367, depth=4, hit_blocks=10, num_fuzzed=287, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:11,orig:5,addr:0x4b440c,time:8349, depth=5, hit_blocks=1, num_fuzzed=257, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:12,orig:3,addr:0x4b450e,time:15344, depth=3, hit_blocks=1, num_fuzzed=259, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:13,orig:10,addr:0x4b1750,time:41527, depth=5, hit_blocks=10, num_fuzzed=128, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:14,orig:10,addr:0x41ff22,time:48572, depth=5, hit_blocks=1, num_fuzzed=103, childs=0, weight=1.0, burn_in=0"
+    ]
+}

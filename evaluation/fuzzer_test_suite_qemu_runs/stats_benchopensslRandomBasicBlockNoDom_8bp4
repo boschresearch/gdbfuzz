@@ -1,0 +1,41 @@
+{
+    "start_time_epoch": 1674547798,
+    "end_time_epoch": 1674634288,
+    "start_time": "24_Jan_2023_08:09:58_UTC",
+    "runtime": 86490,
+    "coverage": 275,
+    "crashes": 40,
+    "timeouts": 0,
+    "breakpoint_interruptions": 275,
+    "runs": 18821477,
+    "runs_per_sec": 217.61448722395653,
+    "cfg_updates": [
+        {
+            "timestamp": 1674547887,
+            "total_basic_blocks": 624,
+            "total_edges": 1003
+        },
+        {
+            "timestamp": 1674550582,
+            "total_basic_blocks": 625,
+            "total_edges": 1004
+        },
+        {
+            "timestamp": 1674553273,
+            "total_basic_blocks": 628,
+            "total_edges": 1008
+        }
+    ],
+    "config_file_path": "/configs/opensslRandomBasicBlockNoDom_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=1, num_fuzzed=102, childs=3, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x4050d1,time:93, depth=1, hit_blocks=98, num_fuzzed=107, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:0,addr:0x4082f8,time:93, depth=1, hit_blocks=44, num_fuzzed=122, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:0,addr:0x414953,time:93, depth=1, hit_blocks=104, num_fuzzed=97, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:1,addr:0x401689,time:375, depth=2, hit_blocks=9, num_fuzzed=98, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:3,addr:0x416f3c,time:563, depth=2, hit_blocks=3, num_fuzzed=109, childs=3, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:6,orig:5,addr:0x404c9c,time:656, depth=3, hit_blocks=7, num_fuzzed=110, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:7,orig:5,addr:0x405193,time:656, depth=3, hit_blocks=4, num_fuzzed=97, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:8,orig:5,addr:0x404ca9,time:852, depth=3, hit_blocks=5, num_fuzzed=122, childs=0, weight=1.0, burn_in=0"
+    ]
+}

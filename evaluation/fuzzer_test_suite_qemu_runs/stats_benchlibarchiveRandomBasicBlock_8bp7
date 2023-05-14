@@ -1,0 +1,42 @@
+{
+    "start_time_epoch": 1674200454,
+    "end_time_epoch": 1674286985,
+    "start_time": "20_Jan_2023_07:40:54_UTC",
+    "runtime": 86531,
+    "coverage": 425,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 151,
+    "runs": 38467778,
+    "runs_per_sec": 444.554876287111,
+    "cfg_updates": [
+        {
+            "timestamp": 1674200584,
+            "total_basic_blocks": 660,
+            "total_edges": 1040
+        },
+        {
+            "timestamp": 1674201514,
+            "total_basic_blocks": 661,
+            "total_edges": 1041
+        },
+        {
+            "timestamp": 1674202442,
+            "total_basic_blocks": 662,
+            "total_edges": 1042
+        }
+    ],
+    "config_file_path": "/configs/libarchiveRandomBasicBlock_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=302, num_fuzzed=205, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x407d2c,time:149, depth=1, hit_blocks=51, num_fuzzed=216, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:0,addr:0x407bf8,time:207, depth=1, hit_blocks=3, num_fuzzed=187, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:1,addr:0x432c5e,time:282, depth=2, hit_blocks=18, num_fuzzed=179, childs=3, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:4,orig:3,addr:0x409c59,time:337, depth=3, hit_blocks=9, num_fuzzed=198, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:5,orig:3,addr:0x432e5f,time:399, depth=3, hit_blocks=3, num_fuzzed=197, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:6,orig:3,addr:0x438818,time:406, depth=3, hit_blocks=19, num_fuzzed=168, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:7,orig:6,addr:0x438a23,time:641, depth=4, hit_blocks=15, num_fuzzed=185, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:8,orig:6,addr:0x405157,time:1064, depth=4, hit_blocks=1, num_fuzzed=192, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:9,orig:5,addr:0x438789,time:4892, depth=4, hit_blocks=4, num_fuzzed=197, childs=0, weight=1.0, burn_in=0"
+    ]
+}

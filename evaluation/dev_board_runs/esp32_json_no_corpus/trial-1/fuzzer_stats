@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1676302059,
+    "end_time_epoch": 1676388656,
+    "start_time": "13_Feb_2023_16:27:39_CET",
+    "runtime": 86597,
+    "coverage": 688,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 221,
+    "runs": 3423478,
+    "runs_per_sec": 39.53344804092521,
+    "cfg_updates": [
+        {
+            "timestamp": 1676302255,
+            "total_basic_blocks": 1477,
+            "total_edges": 2136
+        }
+    ],
+    "config_file_path": "./example_firmware/esp32_arduinojson/fuzz_serial_no_corpus.cfg",
+    "corpus_state": [
+        "./output/esp32_json_no_corpus/trial-3/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=3424, childs=0, weight=1.0, burn_in=0"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "start_time_epoch": 1674569005,
+    "end_time_epoch": 1674655492,
+    "start_time": "24_Jan_2023_15:03:25_CET",
+    "runtime": 86487,
+    "coverage": 226,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 83,
+    "runs": 28231,
+    "runs_per_sec": 0.32641899938719116,
+    "cfg_updates": [
+        {
+            "timestamp": 1674569072,
+            "total_basic_blocks": 421,
+            "total_edges": 612
+        },
+        {
+            "timestamp": 1674572019,
+            "total_basic_blocks": 434,
+            "total_edges": 630
+        },
+        {
+            "timestamp": 1674575605,
+            "total_basic_blocks": 448,
+            "total_edges": 649
+        },
+        {
+            "timestamp": 1674576581,
+            "total_basic_blocks": 456,
+            "total_edges": 660
+        },
+        {
+            "timestamp": 1674585072,
+            "total_basic_blocks": 456,
+            "total_edges": 661
+        }
+    ],
+    "config_file_path": "./example_firmware/CY8CKIT_usb_msc/cy8ckit_fuzz_usb_bulk_no_corpus.cfg",
+    "corpus_state": [
+        "./output/cy8ckit_usb_bulk_no_corpus/trial-1/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=278, childs=0, weight=1.0, burn_in=0"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1674200424,
+    "end_time_epoch": 1674286940,
+    "start_time": "20_Jan_2023_07:40:24_UTC",
+    "runtime": 86516,
+    "coverage": 0,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 0,
+    "runs": 8570383,
+    "runs_per_sec": 99.06124878635165,
+    "cfg_updates": [
+        {
+            "timestamp": 1674200539,
+            "total_basic_blocks": 2254,
+            "total_edges": 3647
+        }
+    ],
+    "config_file_path": "/configs/lcmsBlackbox_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=429, childs=0, weight=1.0, burn_in=0"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "start_time_epoch": 1675079543,
+    "end_time_epoch": 0,
+    "start_time": "30_Jan_2023_12:52:23_CET",
+    "runtime": 1220,
+    "coverage": 8,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 8,
+    "runs": 75523,
+    "runs_per_sec": 61.90409836065574,
+    "cfg_updates": [
+        {
+            "timestamp": 1675079586,
+            "total_basic_blocks": 13,
+            "total_edges": 23
+        }
+    ],
+    "config_file_path": "./example_firmware/CY8CKIT_buggy/fuzz_serial.cfg",
+    "corpus_state": [
+        "./output/cy8ckit_buggy/trial-1/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=2, num_fuzzed=2, childs=1, weight=3.0, burn_in=3",
+        "./output/cy8ckit_buggy/trial-1/corpus/id:1,orig:0,addr:0x10002842,time:53, depth=1, hit_blocks=2, num_fuzzed=2, childs=1, weight=3.0, burn_in=3",
+        "./output/cy8ckit_buggy/trial-1/corpus/id:2,orig:1,addr:0x1000284c,time:260, depth=2, hit_blocks=2, num_fuzzed=3, childs=1, weight=2.0, burn_in=2",
+        "./output/cy8ckit_buggy/trial-1/corpus/id:3,orig:2,addr:0x10002856,time:620, depth=3, hit_blocks=2, num_fuzzed=1, childs=0, weight=5.0, burn_in=4"
+    ]
+}

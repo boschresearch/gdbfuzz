@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1673353048,
+    "end_time_epoch": 1673439524,
+    "start_time": "10_Jan_2023_13:17:28_CET",
+    "runtime": 86476,
+    "coverage": 9,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 7,
+    "runs": 134820,
+    "runs_per_sec": 1.559045284240714,
+    "cfg_updates": [
+        {
+            "timestamp": 1673353123,
+            "total_basic_blocks": 18,
+            "total_edges": 32
+        }
+    ],
+    "config_file_path": "./example_firmware/msp430_buggy/fuzz_serial_no_corpus.cfg",
+    "corpus_state": [
+        "./output/msp430_buggy_no_corpus/trial-0/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=1348, childs=0, weight=1.0, burn_in=0"
+    ]
+}

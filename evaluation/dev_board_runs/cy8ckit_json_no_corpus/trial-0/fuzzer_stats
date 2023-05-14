@@ -1,0 +1,23 @@
+{
+    "start_time_epoch": 1673383915,
+    "end_time_epoch": 1673470414,
+    "start_time": "10_Jan_2023_21:51:55_CET",
+    "runtime": 86499,
+    "coverage": 67,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 16,
+    "runs": 5401567,
+    "runs_per_sec": 62.44658319749361,
+    "cfg_updates": [
+        {
+            "timestamp": 1673384012,
+            "total_basic_blocks": 1217,
+            "total_edges": 1852
+        }
+    ],
+    "config_file_path": "./example_firmware/CY8CKIT_json/fuzz_serial_json_no_corpus.cfg",
+    "corpus_state": [
+        "./output/cy8ckit_json_no_corpus/trial-0/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=0, num_fuzzed=5395, childs=0, weight=1.0, burn_in=0"
+    ]
+}

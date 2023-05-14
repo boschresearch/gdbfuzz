@@ -1,0 +1,90 @@
+{
+    "start_time_epoch": 1675962402,
+    "end_time_epoch": 1676049065,
+    "start_time": "09_Feb_2023_18:06:42_CET",
+    "runtime": 86663,
+    "coverage": 273,
+    "crashes": 0,
+    "timeouts": 1,
+    "breakpoint_interruptions": 89,
+    "runs": 623417,
+    "runs_per_sec": 7.193577420583178,
+    "cfg_updates": [
+        {
+            "timestamp": 1675962649,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1675963621,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1675968759,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1676036950,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        },
+        {
+            "timestamp": 1676037917,
+            "total_basic_blocks": 1504,
+            "total_edges": 2148
+        }
+    ],
+    "config_file_path": "./example_firmware/esp32_wifi_http_server/fuzz_wifi_http.cfg",
+    "corpus_state": [
+        "./output/esp32_http//trial-3/corpus/id:0,orig:-1,addr:0x0,timestamp:0, depth=0, hit_blocks=68, num_fuzzed=252, childs=13, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:1,orig:0,addr:0x4012638b,timestamp:381, depth=1, hit_blocks=9, num_fuzzed=202, childs=2, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:2,orig:1,addr:0x401272af,timestamp:394, depth=2, hit_blocks=53, num_fuzzed=220, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:3,orig:1,addr:0x4012746c,timestamp:419, depth=2, hit_blocks=9, num_fuzzed=242, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:4,orig:0,addr:0x40126a65,timestamp:920, depth=1, hit_blocks=2, num_fuzzed=210, childs=4, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:5,orig:0,addr:0x401272d8,timestamp:1445, depth=1, hit_blocks=5, num_fuzzed=233, childs=7, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:6,orig:5,addr:0x40127a8e,timestamp:1478, depth=2, hit_blocks=7, num_fuzzed=238, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:7,orig:0,addr:0x4012661a,timestamp:1600, depth=1, hit_blocks=5, num_fuzzed=229, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:8,orig:4,addr:0x4012747b,timestamp:2474, depth=2, hit_blocks=7, num_fuzzed=229, childs=2, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:9,orig:0,addr:0x40127823,timestamp:3515, depth=1, hit_blocks=5, num_fuzzed=192, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:10,orig:5,addr:0x401263ee,timestamp:4740, depth=2, hit_blocks=4, num_fuzzed=182, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:11,orig:4,addr:0x401273fd,timestamp:5089, depth=2, hit_blocks=1, num_fuzzed=194, childs=3, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:12,orig:11,addr:0x401274a5,timestamp:5517, depth=3, hit_blocks=3, num_fuzzed=147, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:13,orig:0,addr:0x401277a4,timestamp:6286, depth=1, hit_blocks=7, num_fuzzed=184, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:14,orig:8,addr:0x401272dd,timestamp:9163, depth=3, hit_blocks=1, num_fuzzed=182, childs=2, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:15,orig:14,addr:0x401263f6,timestamp:9635, depth=4, hit_blocks=2, num_fuzzed=145, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:16,orig:4,addr:0x401274b4,timestamp:9742, depth=2, hit_blocks=1, num_fuzzed=171, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:17,orig:7,addr:0x4012734a,timestamp:12335, depth=2, hit_blocks=1, num_fuzzed=161, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:18,orig:11,addr:0x401274ae,timestamp:14896, depth=3, hit_blocks=1, num_fuzzed=141, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:19,orig:0,addr:0x4012767e,timestamp:15613, depth=1, hit_blocks=6, num_fuzzed=126, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:20,orig:8,addr:0x4012728d,timestamp:15934, depth=3, hit_blocks=1, num_fuzzed=139, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:21,orig:5,addr:0x401274c6,timestamp:16284, depth=2, hit_blocks=2, num_fuzzed=136, childs=2, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:22,orig:0,addr:0x401272f2,timestamp:19066, depth=1, hit_blocks=2, num_fuzzed=116, childs=2, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:23,orig:0,addr:0x401294da,timestamp:19318, depth=1, hit_blocks=5, num_fuzzed=131, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:24,orig:0,addr:0x4012656d,timestamp:19507, depth=1, hit_blocks=4, num_fuzzed=119, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:25,orig:5,addr:0x40128901,timestamp:22587, depth=2, hit_blocks=3, num_fuzzed=144, childs=2, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:26,orig:25,addr:0x401274fd,timestamp:22835, depth=3, hit_blocks=4, num_fuzzed=130, childs=2, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:27,orig:25,addr:0x4012658e,timestamp:26118, depth=3, hit_blocks=4, num_fuzzed=123, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:28,orig:0,addr:0x40126409,timestamp:28114, depth=1, hit_blocks=1, num_fuzzed=117, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:29,orig:21,addr:0x40127ead,timestamp:31885, depth=3, hit_blocks=9, num_fuzzed=103, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:30,orig:26,addr:0x4012657e,timestamp:32369, depth=4, hit_blocks=1, num_fuzzed=96, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:31,orig:22,addr:0x4012721a,timestamp:33298, depth=2, hit_blocks=11, num_fuzzed=93, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:32,orig:0,addr:0x401275d7,timestamp:35908, depth=1, hit_blocks=2, num_fuzzed=82, childs=1, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:33,orig:11,addr:0x4012732a,timestamp:36974, depth=3, hit_blocks=1, num_fuzzed=92, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:34,orig:5,addr:0x4012640c,timestamp:40117, depth=2, hit_blocks=2, num_fuzzed=74, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:35,orig:5,addr:0x4012783b,timestamp:42309, depth=2, hit_blocks=1, num_fuzzed=92, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:36,orig:28,addr:0x40127312,timestamp:43805, depth=2, hit_blocks=2, num_fuzzed=62, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:37,orig:22,addr:0x4012730a,timestamp:47149, depth=2, hit_blocks=1, num_fuzzed=70, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:38,orig:0,addr:0x40127342,timestamp:51725, depth=1, hit_blocks=1, num_fuzzed=54, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:39,orig:12,addr:0x40127295,timestamp:52669, depth=4, hit_blocks=1, num_fuzzed=70, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:40,orig:26,addr:0x40126591,timestamp:55424, depth=4, hit_blocks=1, num_fuzzed=51, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:41,orig:10,addr:0x401272e2,timestamp:57655, depth=3, hit_blocks=1, num_fuzzed=43, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:42,orig:21,addr:0x401278e0,timestamp:62877, depth=3, hit_blocks=5, num_fuzzed=45, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:43,orig:14,addr:0x4012731a,timestamp:63787, depth=4, hit_blocks=1, num_fuzzed=41, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:44,orig:32,addr:0x40127699,timestamp:67128, depth=2, hit_blocks=1, num_fuzzed=41, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:45,orig:4,addr:0x40126414,timestamp:71524, depth=2, hit_blocks=1, num_fuzzed=20, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:46,orig:23,addr:0x401272ea,timestamp:72169, depth=2, hit_blocks=1, num_fuzzed=26, childs=0, weight=1.0, burn_in=0",
+        "./output/esp32_http//trial-3/corpus/id:47,orig:5,addr:0x401289ff,timestamp:74481, depth=2, hit_blocks=7, num_fuzzed=21, childs=0, weight=1.0, burn_in=0"
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "start_time_epoch": 1674490720,
+    "end_time_epoch": 0,
+    "start_time": "23_Jan_2023_17:18:40_CET",
+    "runtime": 50529,
+    "coverage": 16,
+    "crashes": 0,
+    "timeouts": 93,
+    "breakpoint_interruptions": 13,
+    "runs": 71676,
+    "runs_per_sec": 1.4185121415424806,
+    "cfg_updates": [
+        {
+            "timestamp": 1674490735,
+            "total_basic_blocks": 18,
+            "total_edges": 32
+        }
+    ],
+    "config_file_path": "./example_firmware/msp430_buggy/fuzz_serial.cfg",
+    "corpus_state": [
+        "./output/msp430_buggy/trial-1/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=7, num_fuzzed=222, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_buggy/trial-1/corpus/id:1,orig:0,addr:0x453c,time:592, depth=1, hit_blocks=2, num_fuzzed=233, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_buggy/trial-1/corpus/id:2,orig:0,addr:0x4550,time:13068, depth=1, hit_blocks=2, num_fuzzed=127, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_buggy/trial-1/corpus/id:3,orig:2,addr:0x4566,time:14690, depth=2, hit_blocks=2, num_fuzzed=116, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_buggy/trial-1/corpus/id:4,orig:3,addr:0x457c,time:19899, depth=3, hit_blocks=3, num_fuzzed=93, childs=0, weight=1.0, burn_in=0"
+    ]
+}

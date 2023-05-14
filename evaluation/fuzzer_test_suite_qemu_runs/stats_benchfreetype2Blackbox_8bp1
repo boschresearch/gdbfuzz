@@ -1,0 +1,24 @@
+{
+    "start_time_epoch": 1674207491,
+    "end_time_epoch": 1674294155,
+    "start_time": "20_Jan_2023_09:38:11_UTC",
+    "runtime": 86664,
+    "coverage": 0,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 0,
+    "runs": 33170818,
+    "runs_per_sec": 382.75198467645157,
+    "cfg_updates": [
+        {
+            "timestamp": 1674207754,
+            "total_basic_blocks": 1486,
+            "total_edges": 2269
+        }
+    ],
+    "config_file_path": "/configs/freetype2Blackbox_8bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=812, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=0, num_fuzzed=847, childs=0, weight=1.0, burn_in=0"
+    ]
+}

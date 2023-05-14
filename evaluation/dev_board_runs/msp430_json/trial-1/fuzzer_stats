@@ -1,0 +1,42 @@
+{
+    "start_time_epoch": 1676106040,
+    "end_time_epoch": 1676192446,
+    "start_time": "11_Feb_2023_10:00:40_CET",
+    "runtime": 86406,
+    "coverage": 160,
+    "crashes": 1,
+    "timeouts": 0,
+    "breakpoint_interruptions": 82,
+    "runs": 132247,
+    "runs_per_sec": 1.5305302872485707,
+    "cfg_updates": [
+        {
+            "timestamp": 1676106044,
+            "total_basic_blocks": 189,
+            "total_edges": 284
+        }
+    ],
+    "config_file_path": "./example_firmware/msp430_arduinojson/fuzz_serial.cfg",
+    "corpus_state": [
+        "./output/msp430_json/trial-1/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=52, num_fuzzed=74, childs=6, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:1,orig:0,addr:0x4c68,time:13, depth=1, hit_blocks=3, num_fuzzed=66, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:2,orig:0,addr:0x4bea,time:30, depth=1, hit_blocks=24, num_fuzzed=70, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:3,orig:0,addr:0x4974,time:104, depth=1, hit_blocks=7, num_fuzzed=72, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:4,orig:0,addr:0x4a24,time:133, depth=1, hit_blocks=10, num_fuzzed=84, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:5,orig:1,addr:0x4580,time:215, depth=2, hit_blocks=2, num_fuzzed=59, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:6,orig:1,addr:0x4950,time:258, depth=2, hit_blocks=8, num_fuzzed=60, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:7,orig:0,addr:0x4926,time:415, depth=1, hit_blocks=1, num_fuzzed=60, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:8,orig:3,addr:0x4984,time:1571, depth=2, hit_blocks=8, num_fuzzed=62, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:9,orig:0,addr:0x4a36,time:1874, depth=1, hit_blocks=1, num_fuzzed=86, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:10,orig:4,addr:0x4736,time:2259, depth=2, hit_blocks=14, num_fuzzed=81, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:11,orig:10,addr:0x4732,time:2332, depth=3, hit_blocks=8, num_fuzzed=64, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:12,orig:8,addr:0x49ee,time:2997, depth=3, hit_blocks=2, num_fuzzed=73, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:13,orig:12,addr:0x4acc,time:4640, depth=4, hit_blocks=7, num_fuzzed=70, childs=2, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:14,orig:8,addr:0x4bfa,time:4959, depth=3, hit_blocks=3, num_fuzzed=67, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:15,orig:13,addr:0x4a84,time:5753, depth=5, hit_blocks=1, num_fuzzed=62, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:16,orig:12,addr:0x4b58,time:9139, depth=4, hit_blocks=2, num_fuzzed=61, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:17,orig:9,addr:0x473e,time:10876, depth=2, hit_blocks=5, num_fuzzed=60, childs=1, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:18,orig:17,addr:0x4880,time:25092, depth=3, hit_blocks=1, num_fuzzed=49, childs=0, weight=1.0, burn_in=0",
+        "./output/msp430_json/trial-1/corpus/id:19,orig:13,addr:0x4af4,time:36644, depth=5, hit_blocks=1, num_fuzzed=32, childs=0, weight=1.0, burn_in=0"
+    ]
+}

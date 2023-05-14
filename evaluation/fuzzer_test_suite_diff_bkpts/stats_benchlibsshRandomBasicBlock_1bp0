@@ -1,0 +1,66 @@
+{
+    "start_time_epoch": 1675621321,
+    "end_time_epoch": 1675707873,
+    "start_time": "05_Feb_2023_18:22:01_UTC",
+    "runtime": 86552,
+    "coverage": 1009,
+    "crashes": 0,
+    "timeouts": 0,
+    "breakpoint_interruptions": 301,
+    "runs": 162564354,
+    "runs_per_sec": 1878.2275857288105,
+    "cfg_updates": [
+        {
+            "timestamp": 1675621471,
+            "total_basic_blocks": 2654,
+            "total_edges": 4343
+        },
+        {
+            "timestamp": 1675622443,
+            "total_basic_blocks": 2657,
+            "total_edges": 4346
+        },
+        {
+            "timestamp": 1675623415,
+            "total_basic_blocks": 2749,
+            "total_edges": 4495
+        },
+        {
+            "timestamp": 1675624626,
+            "total_basic_blocks": 2767,
+            "total_edges": 4525
+        },
+        {
+            "timestamp": 1675627696,
+            "total_basic_blocks": 2767,
+            "total_edges": 4526
+        },
+        {
+            "timestamp": 1675628670,
+            "total_basic_blocks": 2775,
+            "total_edges": 4540
+        },
+        {
+            "timestamp": 1675631119,
+            "total_basic_blocks": 2776,
+            "total_edges": 4541
+        },
+        {
+            "timestamp": 1675634733,
+            "total_basic_blocks": 2776,
+            "total_edges": 4542
+        },
+        {
+            "timestamp": 1675643966,
+            "total_basic_blocks": 3166,
+            "total_edges": 5209
+        }
+    ],
+    "config_file_path": "/configs/libsshRandomBasicBlock_1bp_Benchmark.cfg",
+    "corpus_state": [
+        "/output/trial-0/corpus/id:0,orig:-1,addr:0x0,time:0, depth=0, hit_blocks=786, num_fuzzed=2012, childs=2, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:1,orig:0,addr:0x430f45,time:196, depth=1, hit_blocks=152, num_fuzzed=2119, childs=0, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:2,orig:0,addr:0x416242,time:578, depth=1, hit_blocks=68, num_fuzzed=2060, childs=1, weight=1.0, burn_in=0",
+        "/output/trial-0/corpus/id:3,orig:2,addr:0x420b30,time:4301, depth=2, hit_blocks=3, num_fuzzed=1945, childs=0, weight=1.0, burn_in=0"
+    ]
+}
