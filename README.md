@@ -194,6 +194,7 @@ First, build the Docker image as described previously. Next adopt the benchmark 
 
 ~~~
 cd ./benchmark/benchSUTs
+chmod a+x setup_benchmark_SUTs.py
 make dockerbenchmarkimage
 cd ../scripts
 ./benchmark.py $(pwd)/../benchSUTs/SUTs/ SUTs.json
