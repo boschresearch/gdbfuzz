@@ -35,6 +35,7 @@ First, create a new virtual environment and install all dependencies.
 virtualenv .venv
 source .venv/bin/activate
 make
+chmod a+x ./src/GDBFuzz/main.py
 ~~~
 
 ## Run locally on an example program
