@@ -2,7 +2,7 @@
 
 
 This is the companion code for the paper: 'Fuzzing Embedded Systems using Debugger Interfaces'.
-The paper can be found here https://publications.cispa.saarland/3944/. The code allows the users to
+A preprint of the paper can be found here https://publications.cispa.saarland/3950/. The code allows the users to
 reproduce and extend the results reported in the paper.  Please cite the
 above paper when reporting, reproducing or extending the results.
 
