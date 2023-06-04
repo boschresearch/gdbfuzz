@@ -40,6 +40,7 @@ chmod a+x ./src/GDBFuzz/main.py
 
 ## Run locally on an example program
 ~~~
+chmod a+x ./example_programs/json-2017-02-12
 ./src/GDBFuzz/main.py --config ./example_programs/fuzz_json.cfg
 ~~~
 All config options are explained in the config file.
@@ -52,7 +53,8 @@ make dockerimage
 
 __GDBFuzz__ needs a config file and the software under test (SUT) binary. You can use a Docker volume to make these accessible inside the Docker container:
 ~~~
-docker run -it --env CONFIG_FILE=/example_programs/fuzz_json_docker_qemu.cfg -v $(pwd)/example_programs:/example_programs gdbfuzz:1.0
+chmod a+x ./example_programs/json-2017-02-12
+docker run -it --env CONFIG_FILE=/example_programs/fuzz_json_docker_qemu.cfg -v $(pwd)/example_programs:/example_programs -v $(pwd)/output:/output gdbfuzz:1.0
 ~~~
 
 
