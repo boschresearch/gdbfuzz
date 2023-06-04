@@ -67,7 +67,7 @@ COPY ./setup.cfg /gdbfuzz/setup.cfg
 COPY ./setup.py /gdbfuzz/setup.py
 COPY ./dependencies/Makefile /gdbfuzz/dependencies/Makefile
 
-RUN cd /gdbfuzz && pip install -e .
+RUN cd /gdbfuzz && chmod a+x ./src/GDBFuzz/main.py && pip install -e .
 
 # Build QEMU Plugin for tracking coverage
 RUN cd /gdbfuzz/src/qemu-plugins && QEMU_DIR=/aflpp/qemu_mode/qemuafl/ make && mv libbbtrace.so /aflpp/qemu_mode/libbbtrace.so
