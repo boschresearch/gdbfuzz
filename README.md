@@ -39,11 +39,134 @@ chmod a+x ./src/GDBFuzz/main.py
 ~~~
 
 ## Run locally on an example program
+
+Create a config file as follows
+
+
+~~~
+[SUT]
+# Path to the binary file of the SUT.
+# This can, for example, be an .elf file or a .bin file.
+binary_file_path = <path>
+
+# Address of the root node of the CFG.
+# Breakpoints are placed at nodes of this CFG.
+# e.g. 'LLVMFuzzerTestOneInput' or 'main'
+entrypoint = <entrypoint>
+
+# Number of inputs that must be executed without a breakpoint hit until
+# breakpoints are rotated.
+until_rotate_breakpoints = <number>
+
+
+# Maximum number of breakpoints that can be placed at any given time.
+max_breakpoints = <number>
+
+# Blacklist functions that shall be ignored.
+# ignore_functions is a space separated list of function names e.g. 'malloc free'.
+ignore_functions = <space separated list>
+
+# One of {Hardware, QEMU, SUTRunsOnHost}
+# Hardware: An external component starts a gdb server and GDBFuzz can connect
+#     to this gdb server
+# QEMU: GDBFuzz starts QEMU. QEMU emulates binary_file_path and starts gdbserver.
+# SUTRunsOnHost: GDBFuzz start the target program within GDB.
+target_mode = <mode>
+
+# Set this to False if you want to start ghidra, analyze the SUT,
+# and start the ghidra bridge server manually.
+start_ghidra = True
+
+
+# Space separated list of addresses where software breakpoints (for error
+# handling code) are set. Execution of those is considered a crash.
+# Example: software_breakpoint_addresses = 0x123 0x432
+software_breakpoint_addresses = 
+
+
+# Whether all triggered software breakpoints are considered as crash
+consider_sw_breakpoint_as_error = False
+
+[SUTConnection]
+# The class 'SUT_connection_class' in file 'SUT_connection_path' implements
+# how inputs are sent to the SUT.
+# Inputs can, for example, be sent over Wi-Fi, Serial, Bluetooth, ...
+# This class must inherit from ./connections/SUTConnection.py.
+# See ./connections/SUTConnection.py for more information.
+SUT_connection_file = FIFOConnection.py
+
+[GDB]
+path_to_gdb = gdb-multiarch
+#Written in address:port
+gdb_server_address = localhost:4242
+
+[Fuzzer]
+# In Bytes
+maximum_input_length = 100000
+# In seconds
+single_run_timeout = 20
+# In seconds
+total_runtime = 3600
+
+# Optional
+# Path to a directory where each file contains one seed. If you don't want to
+# use seeds, leave the value empty.
+seeds_directory = 
+
+[BreakpointStrategy]
+# Strategies to choose basic blocks are located in 
+# 'src/GDBFuzz/breakpoint_strategies/'
+# For the paper we use the following strategies
+# 'RandomBasicBlockStrategy.py' - Randomly choosing unreached basic blocks
+# 'RandomBasicBlockNoDomStrategy.py' - Like previous, but doesn't use dominance relations to derive transitively reached nodes.
+# 'RandomBasicBlockNoCorpusStrategy.py' - Like first, but prevents growing the input corpus and therefore behaves like blackbox fuzzing with coverage measurement.
+# 'BlackboxStrategy.py', - Doesn't set any breakpoints
+breakpoint_strategy_file = RandomBasicBlockStrategy.py
+
+[Dependencies]
+path_to_qemu = dependencies/qemu/build/x86_64-linux-user/qemu-x86_64
+path_to_ghidra = dependencies/ghidra
+
+
+[LogsAndVisualizations]
+# One of {DEBUG, INFO, WARNING, ERROR, CRITICAL}
+loglevel = INFO
+
+# Path to a directory where output files (e.g. graphs, logfiles) are stored.
+output_directory = ./output
+
+# If set to True, an MQTT client sends UI elements (e.g. graphs)
+enable_UI = False
+~~~
+
+An example config file is located in `./example_programs/` together with an example program that was compiled using our fuzzing harness in `benchmark/benchSUTs/GDBFuzz_wrapper/common/`. 
+Start fuzzing for one hour with the following command.
+
 ~~~
 chmod a+x ./example_programs/json-2017-02-12
 ./src/GDBFuzz/main.py --config ./example_programs/fuzz_json.cfg
 ~~~
-All config options are explained in the config file.
+
+
+
+## Fuzzing Output 
+
+Depending on the specified `output_directory` in the config file, there should not be a folder `trial-0` with the following structure
+
+    .
+        ├── corpus            # A folder that contains the input corpus.
+        ├── crashes           # A folder that contains crashing inputs - if any.
+        ├── cfg               # The control flow graph as adjacency list.
+        ├── fuzzer_stats      # Statistics of the fuzzing campaign.
+        ├── plot_data         # Table showing at which relative time in the fuzzing campaign which basic block was reached.
+        ├── reverse_cfg       # The reverse control flow graph.
+
+
+## GDBFuzz on Linux user programs
+For fuzzing on Linux user applications, GDBFuzz uses the standard `LLVMFuzzOneInput` entrypoint that is used by almost all fuzzers like AFL, AFL++, libFuzzer,....
+In `benchmark/benchSUTs/GDBFuzz_wrapper/common` There is a wrapper that can be used to compile any compliant fuzz harness into a standalone program that fetches input via a named pipe at `/tmp/fromGDBFuzz`.
+This allows to simulate an embedded device that consumes data via a well defined input interface and therefore run GDBFuzz on any application. For convenience we created a script in `benchmark/benchSUTs` that compiles all programs from our evaluation with our wrapper as explained later. 
+> **_NOTE:_** GDBFuzz is not intended to fuzz Linux user applications. Use AFL++ or other fuzzers therefore. The wrapper just exists for evaluation purposes to enable running benchmarks and comparisons on a scale!
 
 ## Install and run in a Docker container
 The general effectiveness of the approach is shown in a large scale benchmark deployed as docker containers.
@@ -51,14 +174,23 @@ The general effectiveness of the approach is shown in a large scale benchmark de
 make dockerimage
 ~~~
 
-__GDBFuzz__ needs a config file and the software under test (SUT) binary. You can use a Docker volume to make these accessible inside the Docker container:
+To run the above experiment in the docker container (for one hour as specified in the config file), map the `example_programs`and `output` folder as volumes and start GDBFuzz as follows.
 ~~~
 chmod a+x ./example_programs/json-2017-02-12
 docker run -it --env CONFIG_FILE=/example_programs/fuzz_json_docker_qemu.cfg -v $(pwd)/example_programs:/example_programs -v $(pwd)/output:/output gdbfuzz:1.0
 ~~~
-
+An output folder should appear in the current working directory with the structure explained above.
 
 # Detailed Instructions
+
+GDBFuzz can work with any GDB server and therefore most debug probes for microcontrollers.
+
+## GDBFuzz vs. Blackbox (RQ1)
+Regarding RQ1 from the paper, we execute GDBFuzz on different microcontrollers with different firmwares located in `example_firmware`.
+For each experiment we run GDBFuzz with the `RandomBasicBlock` and with the `RandomBasicBlockNoCorpus` strategy. The latter behaves like fuzzing without feedback, but we can still measure the achieved coverage.
+For answering RQ1, we compare the achieved coverage of the `RandomBasicBlock` and the `RandomBasicBlockNoCorpus` strategy.
+Respective config files are in the corresponding subfolders and we now explain how to setup fuzzing on the four development boards.
+
 ## GDBFuzz on STM32  B-L4S5I-IOT01A board
 
 GDBFuzz requires access to a GDB Server. In this case the B-L4S5I-IOT01A and its on-board debugger are used. This on-board debugger sets up a GDB server via the 'st-util' program, and enables access to this GDB server via localhost:4242.
@@ -96,6 +228,16 @@ Run GDBFuzz with a user configuration for arduinojson. We can send data over the
 Fuzzer statistics and logs are in the ./output/... directory.
 
 
+## GDBFuzz on the CY8CKIT-062-WiFi-BT board 
+
+Install `pyocd`:
+
+    pip install --upgrade pip 'mbed-ls>=1.7.1' 'pyocd>=0.16'
+
+Make sure that 'KitProg v3' is on the device and put Board into 'Arm DAPLink' Mode by pressing the appropriate button.
+Start the GDB server:
+
+    pyocd gdbserver --persist
 
 
 ## GDBFuzz on ESP32 and Segger J-Link
@@ -132,16 +274,6 @@ Run GDBFuzz with a user configuration for arduinojson. We can send data over the
 Fuzzer statistics and logs are in the ./output/... directory.
 
 
-## GDBFuzz on the CY8CKIT-062-WiFi-BT board 
-
-Install `pyocd`:
-
-    pip install --upgrade pip 'mbed-ls>=1.7.1' 'pyocd>=0.16'
-
-Make sure that 'KitProg v3' is on the device and put Board into 'Arm DAPLink' Mode by pressing the appropriate button.
-Start the GDB server:
-
-    pyocd gdbserver --persist
 
 ## GDBFuzz on MSP430F5529LP
 
@@ -173,16 +305,28 @@ Reload udev:
     sudo udevadm control --reload
     sudo udevadm trigger
 
-## Compare against Fuzzware
-
-Create a file with valid basic blocks from a control flow graph file
+## Compare against Fuzzware (RQ2)
+In RQ2 from the paper, we compare GDBFuzz against the emulation based approach [Fuzzware](https://github.com/fuzzware-fuzzer/fuzzware). First execute GDBFuzz and Fuzzware as described on the shipped firmware files.
+For each GDBFuzz experiment, we create a file with valid basic blocks from a control flow graph file as follows:
 
     cut -d " " -f1 ./cfg > valid_bbs.txt
 
 Replay coverage against fuzzware result
     fuzzware genstats --valid-bb-file valid_bbs.txt
 
+## Finding Bugs (RQ3)
+When crashing or hanging inputs are found, the are stored in the `crashes` folder. During evaluation, we found the following three bugs:
+
+1. An [infinite loop in the STM32 USB device stack](https://github.com/STMicroelectronics/STM32CubeL4/issues/69), caused by
+counting a uint8_t index variable to an attacker controllable
+uint32_t variable within a for loop.
+2.  A [buffer overflow in the Cypress JSON parser](https://github.com/Infineon/connectivity-utilities/issues/2), caused by
+missing length checks on a fixed size internal buffer.
+3. A [null pointer dereference in the Cypress JSON parser](https://github.com/Infineon/connectivity-utilities/issues/1), caused
+by missing validation checks.
+
 ## GDBFuzz on an Raspberry Pi 4a (8Gb)
+GDBFuzz can also run on a Raspberry Pi host with slight modifications:
 
 1. Ghidra must be modified, such that it runs on an 32-Bit OS
 
@@ -191,17 +335,38 @@ In file `./dependencies/ghidra/support/launch.sh:125` The `JAVA_HOME` variable m
 2. STLink must be at version >= 1.7 to work properly -> Build from sources
 
 
-### Run the full Benchmark
+## GDBFuzz on other boards
+To fuzz software on other boards, GDBFuzz requires 
 
-First, build the Docker image as described previously. Next adopt the benchmark settings in `benchmark/scripts/benchmark.py` to your demands and start the benchmark with:
+1. A microcontroller with hardware breakpoints and a GDB compliant debug probe
+1. The firmware file.
+2. A running GDBServer and suitable GDB application.
+3. An entry point, where fuzzing should start e.g. a parser function
+4. An input interface (see `src/GDBFuzz/connections`) that triggers execution of the code at the entry point e.g. serial connection
+
+All these properties need to be specified in the config file.
+
+### Run the full Benchmark (RQ4 - 8)
+For RQ's 4 - 8 we run a large scale benchmark.
+First, build the Docker image as described previously and compile applications from  Google's [Fuzzer Test Suite](https://github.com/google/fuzzer-test-suite) with our fuzzing harness in `benchmark/benchSUTs/GDBFuzz_wrapper/common`. 
 
 ~~~
 cd ./benchmark/benchSUTs
 chmod a+x setup_benchmark_SUTs.py
 make dockerbenchmarkimage
-cd ../scripts
-./benchmark.py $(pwd)/../benchSUTs/SUTs/ SUTs.json
 ~~~
+
+Next adopt the benchmark settings in `benchmark/scripts/benchmark.py` and `benchmark/scripts/benchmark_aflpp.py` to your demands (especially `number_of_cores`, `trials`, and `seconds_per_trial` )and start the benchmark with:
+
+
+~~~
+cd ./benchmark/scripts
+./benchmark.py $(pwd)/../benchSUTs/SUTs/ SUTs.json
+./benchmark_aflpp.py $(pwd)/../benchSUTs/SUTs/ SUTs.json
+~~~
+
+A folder appears in `./benchmark/scripts` that contains all relevant experiment results.
+
 
 ## [Optional] Install Visualization and Visualization Example
 
