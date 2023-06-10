@@ -142,7 +142,7 @@ Start fuzzing for one hour with the following command.
 chmod a+x ./example_programs/json-2017-02-12
 ./src/GDBFuzz/main.py --config ./example_programs/fuzz_json.cfg
 ~~~
-
+We first see output from Ghidra analyzing the binary executable and susequently messages when breakpoints are relocated or hit.
 
 
 ## Fuzzing Output 
@@ -371,7 +371,7 @@ cd ./benchmark/scripts
 ./benchmark_aflpp.py $(pwd)/../benchSUTs/SUTs/ SUTs.json
 ~~~
 
-A folder appears in `./benchmark/scripts` that contains all relevant experiment results.
+A folder appears in `./benchmark/scripts` that contains plot files (coverage over time), fuzzer statistic files, and control flow graph files for each experiment as in `evaluation/fuzzer_test_suite_qemu_runs`. 
 
 
 ## [Optional] Install Visualization and Visualization Example
