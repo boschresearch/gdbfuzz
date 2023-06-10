@@ -7,30 +7,29 @@ reproduce and extend the results reported in the paper.  Please cite the
 above paper when reporting, reproducing or extending the results.
 
 ## Folder structure
-
-    .
-        ├── benchmark               # Scripts to build Google's fuzzer test suite and run experiments
-        ├── dependencies            # Contains a Makefile to install dependencies for GDBFuzz
-        ├── evaluation              # Raw exeriment data, presented in the paper
-        ├── example_firmware        # Embedded example applications, used for the evaluation 
-        ├── example_programs        # Contains a compiled example program and configs to test GDBFuzz
-        ├── src                     # Contains the implementation of GDBFuzz
-        ├── Dockerfile              # For creating a Docker image with all GDBFuzz dependencies installed
-        ├── LICENSE                 # License
-        ├── Makefile                # Makefile for creating the docker image or install GDBFuzz locally
-        └── README.md               # This README file
-
+~~~
+.
+    ├── benchmark               # Scripts to build Google's fuzzer test suite and run experiments
+    ├── dependencies            # Contains a Makefile to install dependencies for GDBFuzz
+    ├── evaluation              # Raw exeriment data, presented in the paper
+    ├── example_firmware        # Embedded example applications, used for the evaluation 
+    ├── example_programs        # Contains a compiled example program and configs to test GDBFuzz
+    ├── src                     # Contains the implementation of GDBFuzz
+    ├── Dockerfile              # For creating a Docker image with all GDBFuzz dependencies installed
+    ├── LICENSE                 # License
+    ├── Makefile                # Makefile for creating the docker image or install GDBFuzz locally
+    └── README.md               # This README file
+~~~
 ## Purpose of the project
 
-The idea of __GDBFuzz__ is to leverage hardware breakpoints from microcontrollers as feedback for coverage-guided fuzzing. Therefore, GDB is used as a generic interface to enable broad applicability. For binary analysis of the firmware, Ghidra is used. The code contains a benchmark setup for evaluating the method. Additionally, an example firmware is included.
+The idea of __GDBFuzz__ is to leverage hardware breakpoints from microcontrollers as feedback for coverage-guided fuzzing. Therefore, GDB is used as a generic interface to enable broad applicability. For binary analysis of the firmware, Ghidra is used. The code contains a benchmark setup for evaluating the method. Additionally, example firmware files are included.
 
 # Getting Started 
-GDBFuzz enable coverage-guided fuzzing for embedded systems, but - for evaluation purposes - can also fuzz arbitrary user applications. All steps have been tested on Ubuntu 20.04 
+GDBFuzz enables coverage-guided fuzzing for embedded systems, but - for evaluation purposes - can also fuzz arbitrary user applications. For fuzzing on microcontrollers we recommend a local installation of GDBFuzz to be able to send fuzz data to the device under test flawlessly.
 
 ## Install local
-__GDBFuzz__ has been tested on Ubuntu 20.04 LTS and Raspberry Pie OS 32-bit
-Prerequisites are java and python3. Check the Dockerfile for specific requirements.
-First, create a new virtual environment and install all dependencies.
+__GDBFuzz__ has been tested on Ubuntu 20.04 LTS and Raspberry Pie OS 32-bit.
+Prerequisites are java and python3. First, create a new virtual environment and install all dependencies.
 ~~~
 virtualenv .venv
 source .venv/bin/activate
@@ -39,9 +38,7 @@ chmod a+x ./src/GDBFuzz/main.py
 ~~~
 
 ## Run locally on an example program
-
-Create a config file as follows
-
+GDBFuzz reads settings from a config file with the following keys.
 
 ~~~
 [SUT]
@@ -67,8 +64,7 @@ max_breakpoints = <number>
 ignore_functions = <space separated list>
 
 # One of {Hardware, QEMU, SUTRunsOnHost}
-# Hardware: An external component starts a gdb server and GDBFuzz can connect
-#     to this gdb server
+# Hardware: An external component starts a gdb server and GDBFuzz can connect to this gdb server.
 # QEMU: GDBFuzz starts QEMU. QEMU emulates binary_file_path and starts gdbserver.
 # SUTRunsOnHost: GDBFuzz start the target program within GDB.
 target_mode = <mode>
@@ -151,25 +147,25 @@ chmod a+x ./example_programs/json-2017-02-12
 
 ## Fuzzing Output 
 
-Depending on the specified `output_directory` in the config file, there should not be a folder `trial-0` with the following structure
-
-    .
-        ├── corpus            # A folder that contains the input corpus.
-        ├── crashes           # A folder that contains crashing inputs - if any.
-        ├── cfg               # The control flow graph as adjacency list.
-        ├── fuzzer_stats      # Statistics of the fuzzing campaign.
-        ├── plot_data         # Table showing at which relative time in the fuzzing campaign which basic block was reached.
-        ├── reverse_cfg       # The reverse control flow graph.
-
+Depending on the specified `output_directory` in the config file, there should now be a folder `trial-0` with the following structure
+~~~
+.
+    ├── corpus            # A folder that contains the input corpus.
+    ├── crashes           # A folder that contains crashing inputs - if any.
+    ├── cfg               # The control flow graph as adjacency list.
+    ├── fuzzer_stats      # Statistics of the fuzzing campaign.
+    ├── plot_data         # Table showing at which relative time in the fuzzing campaign which basic block was reached.
+    ├── reverse_cfg       # The reverse control flow graph.
+~~~
 
 ## GDBFuzz on Linux user programs
-For fuzzing on Linux user applications, GDBFuzz uses the standard `LLVMFuzzOneInput` entrypoint that is used by almost all fuzzers like AFL, AFL++, libFuzzer,....
+For fuzzing on Linux user applications, GDBFuzz leverages the standard `LLVMFuzzOneInput` entrypoint that is used by almost all fuzzers like AFL, AFL++, libFuzzer,....
 In `benchmark/benchSUTs/GDBFuzz_wrapper/common` There is a wrapper that can be used to compile any compliant fuzz harness into a standalone program that fetches input via a named pipe at `/tmp/fromGDBFuzz`.
 This allows to simulate an embedded device that consumes data via a well defined input interface and therefore run GDBFuzz on any application. For convenience we created a script in `benchmark/benchSUTs` that compiles all programs from our evaluation with our wrapper as explained later. 
 > **_NOTE:_** GDBFuzz is not intended to fuzz Linux user applications. Use AFL++ or other fuzzers therefore. The wrapper just exists for evaluation purposes to enable running benchmarks and comparisons on a scale!
 
 ## Install and run in a Docker container
-The general effectiveness of the approach is shown in a large scale benchmark deployed as docker containers.
+The general effectiveness of our approach is shown in a large scale benchmark deployed as docker containers.
 ~~~
 make dockerimage
 ~~~
@@ -182,6 +178,10 @@ docker run -it --env CONFIG_FILE=/example_programs/fuzz_json_docker_qemu.cfg -v 
 An output folder should appear in the current working directory with the structure explained above.
 
 # Detailed Instructions
+Our evaluation is split in two parts. 
+1. GDBFuzz on its intended setup, directly on the hardware.
+2. GDBFuzz in an emulated environment to allow independend analysis and comparisons of the results.
+
 
 GDBFuzz can work with any GDB server and therefore most debug probes for microcontrollers.
 
@@ -213,7 +213,7 @@ cd ./example_firmware/stm32_disco_arduinojson/
 pio run --target upload
 ~~~
 
-For your info: platformio stored an .elf file of the SUT here: ./example_firmware/stm32_disco_arduinojson/.pio/build/disco_l4s5i_iot01a/firmware.elf This .elf file is also later used in the user configuration for Ghidra.
+For your info: platformio stored an .elf file of the SUT here: `./example_firmware/stm32_disco_arduinojson/.pio/build/disco_l4s5i_iot01a/firmware.elf` This .elf file is also later used in the user configuration for Ghidra.
 
 Start a new terminal, and run the following to start the a GDB Server:
 ~~~
@@ -222,7 +222,7 @@ st-util
 
 Run GDBFuzz with a user configuration for arduinojson. We can send data over the usb port to the microcontroller. The microcontroller forwards this data via serial to the SUT'. In our case `/dev/ttyACM0` is the USB device to the microcontroller board. If your system assigned another device to the microcontroller board, change `/dev/ttyACM0` in the config file to your device.
 ~~~
-./src/GDBFuzz/main.py --config ./example_firmware/stm32_disco_arduinojson/jsonHW.cfg
+./src/GDBFuzz/main.py --config ./example_firmware/stm32_disco_arduinojson/fuzz_serial_json.cfg
 ~~~
 
 Fuzzer statistics and logs are in the ./output/... directory.
@@ -238,10 +238,16 @@ Make sure that 'KitProg v3' is on the device and put Board into 'Arm DAPLink' Mo
 Start the GDB server:
 
     pyocd gdbserver --persist
-
-
+    
+Flash a firmware and start fuzzing e.g. with 
+~~~
+gdb-multiarch
+    target remote :3333
+    load ./example_firmware/CY8CKIT_json/mtb-example-psoc6-uart-transmit-receive.elf
+    monitor reset
+./src/GDBFuzz/main.py --config ./example_firmware/CY8CKIT_json/fuzz_serial_json.cfg
+~~~
 ## GDBFuzz on ESP32 and Segger J-Link
-
 
 - Install the [ESP32 SDK](https://docs.espressif.com/projects/esp-idf/en/v4.4.1/esp32/get-started/index.html#installation-step-by-step)
 
@@ -268,7 +274,7 @@ openocd -f interface/jlink.cfg -f target/esp32.cfg -c "telnet_port 7777" -c "gdb
 
 Run GDBFuzz with a user configuration for arduinojson. We can send data over the usb port to the microcontroller. The microcontroller forwards this data via serial to the SUT'. In our case `/dev/ttyUSB0` is the USB device to the microcontroller board. If your system assigned another device to the microcontroller board, change `/dev/ttyUSB0` in the config file to your device.
 ~~~
-./src/GDBFuzz/main.py --config ./example_firmware/esp32_arduinojson/jsonHW.cfg
+./src/GDBFuzz/main.py --config ./example_firmware/esp32_arduinojson/fuzz_serial.cfg
 ~~~
 
 Fuzzer statistics and logs are in the ./output/... directory.
@@ -292,7 +298,11 @@ or (more stable). Build mspdebug from https://github.com/dlbeer/mspdebug/ and us
 until mspdebug --fet-skip-close --force-reset tilib "opt gdb_loop True" gdb ; do sleep 1 ; done
 ~~~
 
-Ghidra fails to analyze binaries for the TI MSP430 controller out of the box. To fix that, we import the file in the Ghidra GUI, choose MSP430X as architecture and skip the auto analysis. Next, we open the 'Symbol Table', sort them by name and delete all symbols with names like `$C$L*`. Now the auto analysis can be executed.
+Ghidra fails to analyze binaries for the TI MSP430 controller out of the box. To fix that, we import the file in the Ghidra GUI, choose MSP430X as architecture and skip the auto analysis. Next, we open the 'Symbol Table', sort them by name and delete all symbols with names like `$C$L*`. Now the auto analysis can be executed. After analysis, start the ghidra bridge from the Ghidra GUI manually and then start GDBFuzz.
+
+~~~
+./src/GDBFuzz/main.py --config ./example_firmware/msp430_arduinojson/fuzz_serial.cfg
+~~~
 
 ## USB Fuzzing
 
@@ -306,24 +316,20 @@ Reload udev:
     sudo udevadm trigger
 
 ## Compare against Fuzzware (RQ2)
-In RQ2 from the paper, we compare GDBFuzz against the emulation based approach [Fuzzware](https://github.com/fuzzware-fuzzer/fuzzware). First execute GDBFuzz and Fuzzware as described on the shipped firmware files.
-For each GDBFuzz experiment, we create a file with valid basic blocks from a control flow graph file as follows:
+In RQ2 from the paper, we compare GDBFuzz against the emulation based approach [Fuzzware](https://github.com/fuzzware-fuzzer/fuzzware). First we execute GDBFuzz and Fuzzware as described previously on the shipped firmware files.
+For each GDBFuzz experiment, we create a file with valid basic blocks from the control flow graph files as follows:
 
     cut -d " " -f1 ./cfg > valid_bbs.txt
 
-Replay coverage against fuzzware result
+Now we can replay coverage against fuzzware result
     fuzzware genstats --valid-bb-file valid_bbs.txt
 
 ## Finding Bugs (RQ3)
 When crashing or hanging inputs are found, the are stored in the `crashes` folder. During evaluation, we found the following three bugs:
 
-1. An [infinite loop in the STM32 USB device stack](https://github.com/STMicroelectronics/STM32CubeL4/issues/69), caused by
-counting a uint8_t index variable to an attacker controllable
-uint32_t variable within a for loop.
-2.  A [buffer overflow in the Cypress JSON parser](https://github.com/Infineon/connectivity-utilities/issues/2), caused by
-missing length checks on a fixed size internal buffer.
-3. A [null pointer dereference in the Cypress JSON parser](https://github.com/Infineon/connectivity-utilities/issues/1), caused
-by missing validation checks.
+1. An [infinite loop in the STM32 USB device stack](https://github.com/STMicroelectronics/STM32CubeL4/issues/69), caused by counting a uint8_t index variable to an attacker controllable uint32_t variable within a for loop.
+2.  A [buffer overflow in the Cypress JSON parser](https://github.com/Infineon/connectivity-utilities/issues/2), caused by missing length checks on a fixed size internal buffer.
+3. A [null pointer dereference in the Cypress JSON parser](https://github.com/Infineon/connectivity-utilities/issues/1), caused by missing validation checks.
 
 ## GDBFuzz on an Raspberry Pi 4a (8Gb)
 GDBFuzz can also run on a Raspberry Pi host with slight modifications:
@@ -341,7 +347,7 @@ To fuzz software on other boards, GDBFuzz requires
 1. A microcontroller with hardware breakpoints and a GDB compliant debug probe
 1. The firmware file.
 2. A running GDBServer and suitable GDB application.
-3. An entry point, where fuzzing should start e.g. a parser function
+3. An entry point, where fuzzing should start e.g. a parser function or an address
 4. An input interface (see `src/GDBFuzz/connections`) that triggers execution of the code at the entry point e.g. serial connection
 
 All these properties need to be specified in the config file.
@@ -356,7 +362,7 @@ chmod a+x setup_benchmark_SUTs.py
 make dockerbenchmarkimage
 ~~~
 
-Next adopt the benchmark settings in `benchmark/scripts/benchmark.py` and `benchmark/scripts/benchmark_aflpp.py` to your demands (especially `number_of_cores`, `trials`, and `seconds_per_trial` )and start the benchmark with:
+Next adopt the benchmark settings in `benchmark/scripts/benchmark.py` and `benchmark/scripts/benchmark_aflpp.py` to your demands (especially `number_of_cores`, `trials`, and `seconds_per_trial`) and start the benchmark with:
 
 
 ~~~
