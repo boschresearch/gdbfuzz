@@ -33,7 +33,7 @@ install_ghidra:
 	mv ghidra_10.1.4_PUBLIC ghidra
 	echo ***** Install Ghidra Bridge
 	python3 -m ghidra_bridge.install_server ~/ghidra_scripts
-	cd ghidra/Ghidra/Processors && git clone https://github.com/IridiumXOR/ghidra-xtensa Xtensa && \
+	cd ghidra/Ghidra/Processors && git clone https://github.com/Ebiroll/ghidra-xtensa Xtensa && \
 	cd Xtensa && make
 
 install_libFuzzerMutator:
