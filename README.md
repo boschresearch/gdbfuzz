@@ -158,6 +158,10 @@ Depending on the specified `output_directory` in the config file, there should n
     ├── reverse_cfg       # The reverse control flow graph.
 ~~~
 
+## Using Ghidra in GUI mode
+By setting `start_ghidra = False` in the config file, GDBFuzz connects to a Ghidra instance running in GUI mode. Therefore, the ghidra_bridge plugin needs to be started manually from the script manager. During fuzzing, reached program blocks are highlighted in green.
+
+
 ## GDBFuzz on Linux user programs
 For fuzzing on Linux user applications, GDBFuzz leverages the standard `LLVMFuzzOneInput` entrypoint that is used by almost all fuzzers like AFL, AFL++, libFuzzer,....
 In `benchmark/benchSUTs/GDBFuzz_wrapper/common` There is a wrapper that can be used to compile any compliant fuzz harness into a standalone program that fetches input via a named pipe at `/tmp/fromGDBFuzz`.
