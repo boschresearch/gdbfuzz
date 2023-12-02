@@ -27,10 +27,10 @@ install_qemu:
 
 install_ghidra:
 	echo ***** Download Ghidra
-	wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.1.4_build/ghidra_10.1.4_PUBLIC_20220519.zip  -O ghidra.zip
+	wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.4_build/ghidra_10.4_PUBLIC_20230928.zip  -O ghidra.zip
 	unzip ghidra.zip
 	rm ghidra.zip
-	mv ghidra_10.1.4_PUBLIC ghidra
+	mv ghidra_10.4_PUBLIC ghidra
 	echo ***** Install Ghidra Bridge
 	python3 -m ghidra_bridge.install_server ~/ghidra_scripts
 	cd ghidra/Ghidra/Processors && git clone https://github.com/Ebiroll/ghidra-xtensa Xtensa && \
